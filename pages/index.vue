@@ -17,10 +17,13 @@
               <li class="route"><a href="route">Route</a></li>
 
               <li class="dropdown">
-                <a href="#" aria-label="Visit my Github Profile" class="dropbtn"><img src="" alt="Dropdown Button" @click="myFunction()" class="drop__button"></a>
+                <a href="#" aria-label="Visit my Github Profile" class="dropbtn"><img src="/MenuPng.webp" alt="Dropdown Button" @click="myFunction()" class="drop__button"></a>
                 <div class="dropdown-content" id="Dropdown">
+                  <a href="/">Home</a>
+                  <a href="about-eg">About Egypt</a>
                     <a href="prices">Prices</a>
-                    <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down"><button class="cta-drop">Contact Us</button></a>
+                    <a href="route">Route</a>
+                    <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
                 </div>
               </li>
 
@@ -30,7 +33,7 @@
     </header>
 
     <div class="container">
-      <img class="pyramids" loading="eager" src="/cairo.webp">
+      <img class="background" loading="eager" src="/cairo.webp">
       <div class="txt-introduction">
         <div class="item-content">
           <h1>Welcome to</h1>
