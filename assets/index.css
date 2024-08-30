@@ -144,6 +144,11 @@ header {
   height: 30em;
   width: 25%;
   box-shadow: -20px -24px rgb(255, 203, 164);
+  transition: all 0.3s ease 0s;
+}
+.container-anc > img:hover{
+  width: 35%;
+  height: 35em;
 }
 .anc-content{
   position: absolute;
@@ -157,17 +162,15 @@ header {
 }
 .pop-egy{
   position: absolute;
-  top: 67em;
-  left: 7.3em;
-  font-size: 24px;
+  top: 57em;
+  left: 10em;
+  font-size: 28px;
   font-weight: 800;
 }
 .container-items {
   display: grid;
   position: relative;
-  width: 90%;
-  height: auto;
-  outline: 1px solid red;
+  width: 80%;
 
   /* * REMEMBER: MARGIN IS FOR HORIZONTAL! */
   margin: 0 auto;
@@ -177,7 +180,6 @@ header {
   grid-gap: 1em 1em;
   grid-template-rows: repeat(1, auto);
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  
   /* ! Justify-items is for rows and align-items is for columns! */
   justify-items: center;
   align-items: center;
@@ -185,13 +187,13 @@ header {
 /* ! justify-self is for configuring singular items! */
 .item {
   background-color: #f0f0f0;
-  width: 16em;
+  width: 20em;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 .item img {
-  width: 21em;
-  height: 17em;
+  width: 20em;
+  height: 20em;
   border-radius: 8px;
 }
 .grid-content {
@@ -209,11 +211,16 @@ header {
 }
 .grid-content .item-btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 4px 8px;
   background-color: #333;
   border-radius: 4px;
   margin-top: 16px;
   color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.grid-content .item-btn:hover{
+  background-color: rgb(7, 127, 167);
+  cursor: pointer;
 }
 /*
 --------------------------------------------------------------

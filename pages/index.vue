@@ -3,7 +3,7 @@
     <title>Home</title>
     <html lang="en"></html>
     <meta name="title" content="Home">
-    <meta name="description" content="Portfolio of BananenMan">
+    <meta name="description" content="Tours in Egypt by EgyTour">
     <link async href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <body>
@@ -30,7 +30,7 @@
     </header>
 
     <div class="container">
-      <img class="pyramids" src="/cairo.webp">
+      <img class="pyramids" loading="eager" src="/cairo.webp">
       <div class="txt-introduction">
         <div class="item-content">
           <h1>Welcome to</h1>
@@ -40,12 +40,12 @@
       </div>
 
       <div class="btns-div">
-        <button class="introduction-btn" @click="introductionRedirect()">Placeholder</button>
+        <button class="introduction-btn" @click="tourScroll()">Available Tours</button>
       </div>
     </div>
 
     <div class="container-anc">
-      <img class="anc-egy" src="/ancient-egy.webp">
+      <img class="anc-egy" loading="lazy" src="/ancient-egy.webp">
       <div class="txt-anc">
         <div class="anc-content">
           <h1>Ancient Egypt</h1>
@@ -55,78 +55,56 @@
       </div>
     </div>
 
-    <p class="pop-egy">Most popular places in Egypt</p>
+    <p class="pop-egy" id="tours">Most popular places in Egypt</p>
     <div class="container-items">
       <div class="item item-1">
-        <img src="">
+        <img loading="lazy" src="/pyramids.webp">
         <div class="grid-content">
-          <h3>Rocket Tap</h3>
-          <p>In Rocket Tap you tap the screen to not crash!</p>
-          <button @click="RocketRedirect()" class="item-btn">View</button>
+          <h3>Pyramids of Giza</h3>
+          <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
 
       <div class="item item-2">
-        <img src="">
+        <img loading="lazy" src="/egy-abu.webp">
         <div class="grid-content">
-          <h3>Application.Quit()</h3>
-          <p>Application.Quit() is a game where you quit...</p>
-          <button @click="ApplicationRedirect()" class="item-btn">View</button>
+          <h3>Abu Simbel</h3>
+          <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
 
       <div class="item item-3">
-        <img src="">
+        <img loading="lazy" src="/egy-luxor.webp">
         <div class="grid-content">
-          <h3>Flappy Bird</h3>
+          <h3>Luxor's Temples & Tombs</h3>
           <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
       <div class="item item-4">
-        <img src="">
+        <img loading="lazy" src="/egy-nile.webp">
         <div class="grid-content">
-          <h3>Flappy Bird</h3>
-          <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
+          <h3>Cruising the Nile</h3>
+          <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
       <div class="item item-5">
-        <img src="">
+        <img loading="lazy" src="/egy-dive.webp">
         <div class="grid-content">
-          <h3>Flappy Bird</h3>
-          <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
+          <h3>Diving the Red Sea</h3>
+          <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
       <div class="item item-6">
-        <img src="">
+        <img loading="lazy" src="/egy-salt.webp">
         <div class="grid-content">
-          <h3>Flappy Bird</h3>
-          <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
-        </div>
-      </div>
-      <div class="item item-7">
-        <img src="">
-        <div class="grid-content">
-          <h3>Flappy Bird</h3>
-          <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
-        </div>
-      </div>
-      <div class="item item-8">
-        <img src="">
-        <div class="grid-content">
-          <h3>Flappy Bird</h3>
-          <p>Flappy Bird is a remake of the original game.</p>
-          <!-- <a @click="FlappyRedirect()" class="item-btn">View</a> -->
-          <button @click="FlappyRedirect()" class="item-btn">View</button>
+          <h3>Egypt's White Desert</h3>
+          <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
+          <button @click="RocketRedirect()" class="item-btn">Tours</button>
         </div>
       </div>
     </div>
@@ -147,4 +125,11 @@
   definePageMeta({
     layout: 'default'
   })
+
+  function tourScroll() {
+  tours.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  })
+}
   </script>
