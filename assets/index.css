@@ -143,11 +143,11 @@ header {
 .container-anc > img{
   height: 30em;
   width: 25%;
-  z-index: 1;
   box-shadow: -20px -24px rgb(255, 203, 164);
   transition: all 0.3s ease 0s;
 }
 .container-anc > img:hover{
+  z-index: 1;
   width: 35%;
   height: 35em;
 }
@@ -224,6 +224,79 @@ header {
 }
 /*
 --------------------------------------------------------------
+* FOOTER
+--------------------------------------------------------------
+*/
+footer{
+  background-color: #111;
+  position: relative;
+  bottom: -20rem;
+}
+.footerContainer{
+  width: 100%;
+  background-color: #111;
+  padding: 70px 30px 20px ;
+}
+.socialIcons{
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding:  10px;
+/*   background-color: white; */
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: white;
+  opacity: 1;
+}
+.footerNav{
+  background-color: #111;
+  margin: 30px 0;
+}
+.footerNav ul{
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 1;
+  background-color: #111;
+}
+.footerNav ul li {
+  background-color: #111;
+}
+.footerNav ul li a:hover{
+  text-decoration: underline;
+}
+.footerBottom{
+  background-color: #111;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  background-color: #111;
+  color: white;
+}
+.designer{
+  background-color: #111;
+  opacity: 0.7;
+  text-transform: uppercase;
+  color: yellow;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+/*
+--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------
 */
@@ -244,11 +317,11 @@ header {
   }
   .dropdown-content {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #f9f9f9;
   min-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 999;
   }
   .dropdown-content a {
   color: black;
@@ -259,6 +332,7 @@ header {
   }
   .dropdown-content a:hover {background-color: #f1f1f1;}
   .dropdown:hover .dropdown-content {
+    position: fixed;
     display: block;
   }
 }
@@ -266,7 +340,7 @@ header {
 
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     right: 0em;
     top: 0em;
     background-color: #f9f9f9;
@@ -274,7 +348,7 @@ header {
     min-width: 100%;
     min-height: 50em;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 999;
   }
   
   .dropdown-content a {
@@ -290,24 +364,27 @@ header {
 @media (max-width: 600px) {
 .background{
   width: 100%;
-  height: 45rem;
+  height: 20rem;
+}
+.logo{
+  font-size: 30px;
 }
 .item-content{
-  left: 1em;
-  top: 10em;
+  left: 2em;
+  top: 7em;
 }
 .item-content h1{
-  font-size: 60px;
+  font-size: 30px;
 }
 .item-content h2{
-  font-size: 60px;
+  font-size: 30px;
 }
 .item-content p{
-  font-size: 25px;
+  font-size: 15px;
 }
 .introduction-btn{
-  top: 30em;
-  left: 1em;
+  top: 18em;
+  left: 2em;
 }
 
 .container-anc{
@@ -319,14 +396,36 @@ header {
   width: 8em;
 }
 .container-anc > img:hover{
+  z-index: 1;
   height: 24em;
   width: 16em;
 }
 .anc-content{
   font-size: 12px;
-  left: 20em;
+  left: 0.5em;
+  top: 25em;
+}
+.anc-content h1{
+  left: 4em;
+  position: relative;
+}
+.anc-content p{
+  max-width: 100%;
+}
+.pop-egy{
+  top: 40em;
+  left: 1em;
+  font-size: 24px;
 }
 .container-items{
-  top: 30em;
+  top: 25em;
+  right: 3.5em;
+}
+.footerNav ul li a{
+  font-size: 0.75em;
+  margin: 0.6em;
+}
+footer{
+  bottom: -30rem;
 }
 }

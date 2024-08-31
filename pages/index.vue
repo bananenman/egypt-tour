@@ -14,15 +14,15 @@
               <li class="index"><a href="/">Home</a></li>
               <li class="about-eg"><a href="about-eg">About Egypt</a></li>
               <li class="prices"><a href="prices">Prices</a></li>
-              <li class="route"><a href="route">Route</a></li>
+              <li class="route"><a href="route">Routes</a></li>
 
               <li class="dropdown">
                 <a href="#" aria-label="Visit my Github Profile" class="dropbtn"><img src="/MenuPng.webp" alt="Dropdown Button" @click="myFunction()" class="drop__button"></a>
                 <div class="dropdown-content" id="Dropdown">
                   <a href="/">Home</a>
-                  <a href="about-eg">About Egypt</a>
-                    <a href="prices">Prices</a>
-                    <a href="route">Route</a>
+                  <a href="https://www.example.com/">About Egypt</a>
+                    <a href="https://www.example.com/">Prices</a>
+                    <a href="https://www.example.com/">Routes</a>
                     <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
                 </div>
               </li>
@@ -111,6 +111,30 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="https://www.example.com/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-github"></i></a>
+            <a href="https://www.example.com/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.example.com/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.example.com/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-pinterest-alt"></i></a>
+            <a href="https://www.example.com/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-instagram"></i></a>
+          </div>
+          <div class="footerNav">
+              <ul>
+                  <li><a href="https://www.example.com/">About Egypt</a></li>
+                  <li><a href="https://www.example.com/">Prices</a></li>
+                  <li><a href="https://www.example.com/">Routes</a></li>
+                  <li><a href="mailto:bananenmaninquiries@gmail.com">Contact Us</a></li>
+              </ul>
+          </div>
+          
+      </div>
+      <div class="footerBottom">
+          <p>Made by<span class="designer">David</span></p>
+      </div>
+    </footer>
     </body>
   
   </template>
@@ -121,15 +145,15 @@
   
   <script setup>
   
-  useSeoMeta({
-    title: 'Home',
-  })
+useSeoMeta({
+  title: 'Home',
+})
   
-  definePageMeta({
-    layout: 'default'
-  })
+definePageMeta({
+  layout: 'default'
+})
 
-  function tourScroll() {
+function tourScroll() {
   tours.scrollIntoView({
     behavior: "smooth",
     block: "start"
