@@ -65,7 +65,7 @@
         <div class="grid-content">
           <h3>Pyramids of Giza</h3>
           <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/giza-tour" class="item-btn">Tour</a>
         </div>
       </div>
 
@@ -74,7 +74,7 @@
         <div class="grid-content">
           <h3>Abu Simbel</h3>
           <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/simbel-tour" class="item-btn">Tour</a>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
         <div class="grid-content">
           <h3>Luxor's Temples & Tombs</h3>
           <p>Flappy Bird is a remake of the original game.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/simbel-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-4">
@@ -91,7 +91,7 @@
         <div class="grid-content">
           <h3>Cruising the Nile</h3>
           <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/simbel-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-5">
@@ -99,7 +99,7 @@
         <div class="grid-content">
           <h3>Diving the Red Sea</h3>
           <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/simbel-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-6">
@@ -107,7 +107,7 @@
         <div class="grid-content">
           <h3>Egypt's White Desert</h3>
           <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
-          <button @click="RocketRedirect()" class="item-btn">Tours</button>
+          <a href="/simbel-tour" class="item-btn">Tour</a>
         </div>
       </div>
     </div>
