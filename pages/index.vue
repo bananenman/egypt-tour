@@ -58,7 +58,7 @@
       </div>
     </div>
 
-    <p class="pop-egy" id="tours">Most popular places in Egypt</p>
+    <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
     <div class="container-items">
       <div class="item item-1">
         <img loading="lazy" src="/pyramids.webp">
