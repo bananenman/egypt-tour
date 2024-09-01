@@ -27,7 +27,7 @@ useSeoMeta({
 })
 
 useHead({
-  titleTemplate: '%s - Egypt',
+  titleTemplate: '%s - EgyTour',
   htmlAttrs: {
     lang: 'en',
   }
