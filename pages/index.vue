@@ -74,7 +74,7 @@
         <div class="grid-content">
           <h3>Abu Simbel</h3>
           <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
-          <a href="/simbel-tour" class="item-btn">Tour</a>
+          <a href="/abu-tour" class="item-btn">Tour</a>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
         <div class="grid-content">
           <h3>Luxor's Temples & Tombs</h3>
           <p>Flappy Bird is a remake of the original game.</p>
-          <a href="/simbel-tour" class="item-btn">Tour</a>
+          <a href="/luxor-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-4">
@@ -91,7 +91,7 @@
         <div class="grid-content">
           <h3>Cruising the Nile</h3>
           <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
-          <a href="/simbel-tour" class="item-btn">Tour</a>
+          <a href="/nile-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-5">
@@ -99,7 +99,7 @@
         <div class="grid-content">
           <h3>Diving the Red Sea</h3>
           <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
-          <a href="/simbel-tour" class="item-btn">Tour</a>
+          <a href="/dive-tour" class="item-btn">Tour</a>
         </div>
       </div>
       <div class="item item-6">
@@ -107,7 +107,7 @@
         <div class="grid-content">
           <h3>Egypt's White Desert</h3>
           <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
-          <a href="/simbel-tour" class="item-btn">Tour</a>
+          <a href="/salt-tour" class="item-btn">Tour</a>
         </div>
       </div>
     </div>

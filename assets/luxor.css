@@ -313,9 +313,9 @@ li.dropdown {
 }
 .info-text h1{
     position: absolute;
-    font-size: 30px;
+    font-size: 25px;
     max-width: 100%;
-    left: 1em;
+    left: 0.8em;
     top: 0.5em;
 }
 .info-text p{

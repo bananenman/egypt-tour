@@ -315,7 +315,7 @@ li.dropdown {
     position: absolute;
     font-size: 30px;
     max-width: 100%;
-    left: 1em;
+    left: 0.7em;
     top: 0.5em;
 }
 .info-text p{
