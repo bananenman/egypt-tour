@@ -12,7 +12,6 @@
   "dependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.5.1",
-    "@vercel/speed-insights": "^1.0.12",
     "nuxt": "^3.13.0",
     "nuxt-server-utils": "^0.0.7",
     "vue": "latest"
