@@ -3,7 +3,7 @@
     <html lang="en"></html>
     <meta name="title" content="Home">
     <meta name="description" content="Tours in Egypt by EgyTour">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='preload' as="style">
+    <link async href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <body>
       <div class="container">
@@ -22,7 +22,7 @@
       </div>
 
       <div class="container-anc">
-        <nuxt-img class="anc-egy" provider="cloudinary" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
+        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
