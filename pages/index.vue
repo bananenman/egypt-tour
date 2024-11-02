@@ -3,7 +3,7 @@
     <html lang="en"></html>
     <meta name="title" content="Home">
     <meta name="description" content="Tours in Egypt by EgyTour">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='preload' as="style">
 
     <body>
       <div class="container">
