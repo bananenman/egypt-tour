@@ -8,7 +8,7 @@
 
     <body>
       <div class="container">
-        <img class="background" src="/cairo.webp" alt="Panorama of Cairo taken on the Cairo tower" >
+        <img class="background" alt="Panorama of Cairo taken on the Cairo tower" >
         <div class="txt-introduction">
           <div class="item-content">
             <h1>Welcome to</h1>
