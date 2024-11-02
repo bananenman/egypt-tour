@@ -22,7 +22,7 @@
       </div>
 
       <div class="container-anc">
-        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
+        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
@@ -35,7 +35,7 @@
       <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
       <div class="container-items">
         <div class="item item-1">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_pc2vmw.webp" alt="Great Pyramids of Giza"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_card_kj3rxy.webp" alt="Great Pyramids of Giza"/>
           <div class="grid-content">
             <h1>Pyramids of Giza</h1>
             <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="item item-2">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-abu_hfevvk.webp" alt="Abu Simbel - Temple of Ramses the second"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-abu_nzsblx.webp" alt="Abu Simbel - Temple of Ramses the second"/>
           <div class="grid-content">
             <h1>Abu Simbel</h1>
             <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
@@ -53,7 +53,7 @@
         </div>
 
         <div class="item item-3">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-luxor_papbl0.webp" alt="Luxor Temple & Tomb"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-luxor_v0tajz.webp" alt="Luxor Temple & Tomb"/>
           <div class="grid-content">
             <h1>Luxor Temple & Tomb</h1>
             <p>The Luxor Temple may have been the place where crowning took place.</p>
@@ -61,27 +61,27 @@
           </div>
         </div>
         <div class="item item-4">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fefntk.webp"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fg4jo0.webp"/>
           <div class="grid-content">
             <h1>Cruising the Nile</h1>
             <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
-            <a href="/nile-tour" class="item-btn">Tour</a>
+            <a href="/info/nile-tour" class="item-btn">Tour</a>
           </div>
         </div>
         <div class="item item-5">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_x7pvjl.webp"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_h9jgfk.webp"/>
           <div class="grid-content">
             <h1>Diving the Red Sea</h1>
             <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
-            <a href="/dive-tour" class="item-btn">Tour</a>
+            <a href="/info/dive-tour" class="item-btn">Tour</a>
           </div>
         </div>
         <div class="item item-6">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_cx0bot.webp"/>
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_sun9yg.webp"/>
           <div class="grid-content">
             <h1>Egypt's White Desert</h1>
             <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
-            <a href="/salt-tour" class="item-btn">Tour</a>
+            <a href="/info/salt-tour" class="item-btn">Tour</a>
           </div>
         </div>
       </div>
@@ -109,7 +109,6 @@
       block: "start"
     })
   }
-
 
   function GithubRedirect()
   {
