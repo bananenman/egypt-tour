@@ -7,7 +7,7 @@
 
     <body>
       <div class="container">
-        <!-- <nuxt-img class="background" provider="cloudinary" src="/cairo_rtcfyg.webp" alt="Panorama of Cairo taken on the Cairo tower"/> -->
+        <nuxt-img class="background" provider="cloudinary" src="/cairo_rtcfyg.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
         <div class="txt-introduction">
           <div class="item-content">
             <h1>Welcome to</h1>
