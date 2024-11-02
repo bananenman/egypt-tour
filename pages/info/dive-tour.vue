@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <img src="/egy-dive.webp" loading="lazy" alt="Red Sea Corals">
+          <nuxt-img provider="cloudinary" src="/egy-dive_x7pvjl.webp"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Diving in the Red Sea</h1>

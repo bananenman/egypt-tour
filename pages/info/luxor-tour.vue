@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <img src="/egy-luxor.webp" loading="lazy" alt="Luxor's Temples & Tombs">
+          <nuxt-img provider="cloudinary" src="/egy-luxor_papbl0.webp" alt="Luxor Temple & Tomb"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Luxor's Temples & Tombs</h1>

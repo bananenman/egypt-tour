@@ -1,4 +1,3 @@
-
 <template>
     <title>Home</title>
     <html lang="en"></html>
@@ -8,7 +7,7 @@
 
     <body>
       <div class="container">
-        <img class="background" src="/cairo.webp" alt="Panorama of Cairo taken on the Cairo tower" >
+        <nuxt-img class="background" provider="cloudinary" loading="eager" src="/cairo_ztdxls.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
         <div class="txt-introduction">
           <div class="item-content">
             <h1>Welcome to</h1>
@@ -23,7 +22,7 @@
       </div>
 
       <div class="container-anc">
-        <img class="anc-egy" loading="lazy" src="/ancient-egy.webp" alt="Pharaoh in sarcophagus">
+        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
@@ -36,7 +35,7 @@
       <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
       <div class="container-items">
         <div class="item item-1">
-          <img loading="lazy" src="/pyramids.webp" alt="Great Pyramids of Giza">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_pc2vmw.webp" alt="Great Pyramids of Giza"/>
           <div class="grid-content">
             <h1>Pyramids of Giza</h1>
             <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
@@ -45,7 +44,7 @@
         </div>
 
         <div class="item item-2">
-          <img loading="lazy" src="/egy-abu.webp" alt="Abu Simbel - Temple of Ramses the second">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-abu_hfevvk.webp" alt="Abu Simbel - Temple of Ramses the second"/>
           <div class="grid-content">
             <h1>Abu Simbel</h1>
             <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
@@ -54,7 +53,7 @@
         </div>
 
         <div class="item item-3">
-          <img loading="lazy" src="/egy-luxor.webp" alt="Luxor Temple & Tomb">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-luxor_papbl0.webp" alt="Luxor Temple & Tomb"/>
           <div class="grid-content">
             <h1>Luxor Temple & Tomb</h1>
             <p>The Luxor Temple may have been the place where crowning took place.</p>
@@ -62,7 +61,7 @@
           </div>
         </div>
         <div class="item item-4">
-          <img loading="lazy" src="/egy-nile.webp">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fefntk.webp"/>
           <div class="grid-content">
             <h1>Cruising the Nile</h1>
             <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
@@ -70,7 +69,7 @@
           </div>
         </div>
         <div class="item item-5">
-          <img loading="lazy" src="/egy-dive.webp">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_x7pvjl.webp"/>
           <div class="grid-content">
             <h1>Diving the Red Sea</h1>
             <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
@@ -78,7 +77,7 @@
           </div>
         </div>
         <div class="item item-6">
-          <img loading="lazy" src="/egy-salt.webp">
+          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_cx0bot.webp"/>
           <div class="grid-content">
             <h1>Egypt's White Desert</h1>
             <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
