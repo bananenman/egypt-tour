@@ -7,7 +7,7 @@
 
     <body>
       <div class="container">
-        <nuxt-img class="background" provider="cloudinary" src="/cairo_ztdxls.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
+        <nuxt-img class="background" provider="cloudinary" src="/cairo_rtcfyg.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
         <div class="txt-introduction">
           <div class="item-content">
             <h1>Welcome to</h1>
@@ -22,7 +22,7 @@
       </div>
 
       <div class="container-anc">
-        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
+        <nuxt-img class="anc-egy" provider="cloudinary" src="/ancient-egy_jfipjo.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
