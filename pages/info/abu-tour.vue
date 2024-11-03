@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/egy-abu_hfevvk.webp" alt="Abu Simbel - Temple of Ramses the second"/>
+          <nuxt-img provider="cloudinary" src="/egy-luxor_info_znvoed.webp" alt="Abu Simbel - Temple of Ramses the second"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Abu Simbel</h1>

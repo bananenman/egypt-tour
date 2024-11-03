@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/egy-nile_fefntk.webp"/>
+          <nuxt-img provider="cloudinary" src="/egy-nile_info_arpdfp.webp"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Cruising the Nile</h1>

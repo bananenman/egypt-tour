@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/egy-salt_cx0bot.webp"/>
+          <nuxt-img provider="cloudinary" src="/egy-salt_info_phdiez.webp"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Egypt's White Desert</h1>

@@ -8,7 +8,7 @@
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/pyramids_pc2vmw.webp" alt="Great Pyramids of Giza"/>
+          <nuxt-img provider="cloudinary" src="/cairo_info_tsehzb.webp" alt="Great Pyramids of Giza"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Pyramids of Giza</h1>
