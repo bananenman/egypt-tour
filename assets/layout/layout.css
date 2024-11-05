@@ -15,6 +15,7 @@
 }
 /*#endregion */
 
+/*#region Header*/
 header {
     display: flex;
     justify-content: flex-end;
@@ -57,6 +58,7 @@ header {
     padding: 10px;
     border-radius: 15px;
 }
+/*#endregion*/
 
 /*#region Footer*/
 
@@ -157,7 +159,7 @@ footer{
     }
     li.dropdown {
       display: inline-block;
-      position: fixed;
+      position: absolute;
     }
     .drop__button {
       width: 40px;
@@ -223,12 +225,22 @@ footer{
       top: 18em;
       left: 2em;
     }
+
+    li.dropdown{
+        right: 0em;
+        top: 1.5em;
+    }
+
     .footerNav ul li a{
         font-size: 0.75em;
         margin: 0.6em;
     }
+    .footerNav ul li a:hover{
+        font-size: 0.75em;
+    }
     footer{
         bottom: -30rem;
     }
+    
 }
 /*#endregion */

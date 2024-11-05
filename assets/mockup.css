@@ -1,0 +1,56 @@
+@font-face { font-family: Playfair; src: url('../font/PlayfairDisplay.ttf'); font-display: swap; } 
+
+/*#region Body*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  
+li, a, button {
+    font-family: Playfair;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+/*#endregion */
+
+.container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 40em;
+}
+h1{
+    position: relative;
+    top: 6em;
+    left: 12em;
+    font-size: 64px;
+}
+.p1{
+    position: relative;
+    top: 16em;
+    left: 33.8em;
+    font-size: 24px;
+}
+
+
+@media (max-width: 600px) {
+
+    .container{
+        height: 15em;
+    }
+
+    h1{
+        font-size: 44px;
+        top: 5em;
+        left: 1em;
+    }
+
+    .p1{
+        font-size: 18px;
+        top: 12em;
+        left: 4em;
+    }
+}

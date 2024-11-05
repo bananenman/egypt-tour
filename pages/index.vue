@@ -9,7 +9,7 @@
       <div class="container">
         <picture>
           <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1730590496/cairo-mobile_ubhpin.webp">
-          <source media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1730585030/cairo_isnkeu.webp">
+          <source class="ee" media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1730635078/cairo_isnkeu.webp">
           <nuxt-img class="background" provider="cloudinary" src="/cairo_isnkeu.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
         </picture>
         <div class="txt-introduction">
@@ -26,7 +26,7 @@
       </div>
 
       <div class="container-anc">
-        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
+        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
@@ -91,7 +91,7 @@
       </div>
     </body>
   
-  </template>
+</template>
   
 <style>
   @import url("../assets/index.css");

@@ -29,10 +29,10 @@
     <footer>
       <div class="footerContainer">
           <div class="socialIcons">
-            <a href="/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-facebook"></i></a>
-            <a href="/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-twitter"></i></a>
-            <a href="/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-pinterest-alt"></i></a>
-            <a href="/" aria-label="Visit my Github Profile" @click="GithubRedirect()"><i class="bx bxl-instagram"</i></a>
+            <a href="/mockup" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
+            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
+            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-pinterest-alt"></i></a>
+            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-instagram"</i></a>
           </div>
           <div class="footerNav">
               <ul>
@@ -45,7 +45,7 @@
           
       </div>
       <div class="footerBottom">
-          <p>Made by<span class="designer" @click="GithubRedirect()">David</span></p>
+          <p>Made by<span class="designer" @click="SiteRedirect()">David</span></p>
       </div>
     </footer>
   </body>
@@ -56,7 +56,7 @@
 </style>
 
 <script setup>
-  function GithubRedirect()
+  function SiteRedirect()
   {
     window.open("https://bananenman.vercel.app/")
   }
