@@ -19,8 +19,13 @@ li, a, button {
 /*#region Text*/
 
 .background {
+<<<<<<< HEAD
   width: 100vw;
   height: 100%;
+=======
+  width: 100%;
+  height: 60.5em;
+>>>>>>> c6629164c4eb7ac2df97c2c8bf9af353dba58376
 }
 .container {
   display: flex;
@@ -30,7 +35,11 @@ li, a, button {
   flex-direction: column;
   position: relative;
   width: 100%;
+<<<<<<< HEAD
   height: 58em;
+=======
+  height: 60.5em;
+>>>>>>> c6629164c4eb7ac2df97c2c8bf9af353dba58376
 }
 .item-content{
   position: absolute;
