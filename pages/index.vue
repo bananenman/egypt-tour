@@ -21,7 +21,7 @@
         </div>
 
         <div class="btns-div">
-          <button class="introduction-btn" @click="tourScroll()">Available Tours</button>
+          <button class="introduction-btn" @click="apiCall()">Available Tours</button>
         </div>
       </div>
 
@@ -98,6 +98,7 @@
 </style>
   
 <script setup>
+  import axios from 'axios'
   
   useSeoMeta({
     title: 'Home',
@@ -106,6 +107,13 @@
   definePageMeta({
     layout: 'default'
   })
+
+  async function apiCall(){
+    const todo = await $fetch('/api/hello', {
+    method: 'PUT',
+    body: { some: 'json00'}
+    })
+  }
 
   function tourScroll() {
     tours.scrollIntoView({
