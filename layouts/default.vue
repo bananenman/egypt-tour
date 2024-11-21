@@ -29,10 +29,10 @@
     <footer>
       <div class="footerContainer">
           <div class="socialIcons">
-            <a href="/mockup" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
-            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
-            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-pinterest-alt"></i></a>
-            <a href="/mockup" aria-label="Visit my Github Profile"><i class="bx bxl-instagram"</i></a>
+            <a href="/facebook" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
+            <a href="/twitter" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
+            <a href="/pinterest" aria-label="Visit my Github Profile"><i class="bx bxl-pinterest-alt"></i></a>
+            <a href="/instagram" aria-label="Visit my Github Profile"><i class="bx bxl-instagram"</i></a>
           </div>
           <div class="footerNav">
               <ul>

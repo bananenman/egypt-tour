@@ -83,6 +83,13 @@ li, a, button {
     width: 200px;
 
 }
+
+.map{
+    position: relative;
+    top: 40em;
+    border: 1px solid black;
+}
+
 /*
 --------------------------------------------------------------
 # Media Queries

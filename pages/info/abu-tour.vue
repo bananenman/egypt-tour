@@ -17,7 +17,9 @@
               <a href="/" class="info-btn-t">Book a Tour</a>
             </div>
           </div>
+          <iframe class="map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4iE2xVSpkLLOXoyqT-RuPwURN3ddScAI&q=Eiffel+Tower,Paris+France" width=400 height=350 allowfullscreen></iframe>
       </div>
+      
     </body>
   
 </template>
