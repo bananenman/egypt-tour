@@ -13,11 +13,7 @@ export default defineNuxtConfig({
       cloudName: 'dndfdqrtr',
       apiKey: '752348868543861',
     },
-<<<<<<< HEAD
-  },
-=======
   },  
->>>>>>> b6bdbf8 (Added api)
   
   devtools: {enabled: false},
   ssr: false,
