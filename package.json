@@ -16,6 +16,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.5.1",
     "axios": "^1.7.7",
+    "leaflet": "^1.9.4",
     "nuxt": "^3.13.0",
     "nuxt-server-utils": "^0.0.7",
     "vue": "latest"

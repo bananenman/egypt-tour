@@ -86,8 +86,11 @@ li, a, button {
 
 .map{
     position: relative;
-    top: 40em;
-    border: 1px solid black;
+    left: 11em;
+
+    height: 40em;
+    width: 40em;
+    outline: 1px solid red;
 }
 
 /*

@@ -19,13 +19,8 @@ li, a, button {
 /*#region Text*/
 
 .background {
-<<<<<<< HEAD
-  width: 100vw;
-  height: 100%;
-=======
   width: 100%;
-  height: 60.5em;
->>>>>>> c6629164c4eb7ac2df97c2c8bf9af353dba58376
+  height: 80em;
 }
 .container {
   display: flex;
@@ -35,11 +30,7 @@ li, a, button {
   flex-direction: column;
   position: relative;
   width: 100%;
-<<<<<<< HEAD
-  height: 58em;
-=======
-  height: 60.5em;
->>>>>>> c6629164c4eb7ac2df97c2c8bf9af353dba58376
+  height: 61em;
 }
 .item-content{
   position: absolute;
@@ -193,6 +184,29 @@ li, a, button {
 
   
 }
+
+@media (max-width: 901px) {
+  .container {
+    outline: 1px solid red;
+    height: 40em;
+  }
+  .item-content h1 {
+    font-size: 60px;
+  }
+  .item-content h2 {
+    font-size: 60px;
+  }
+
+  .introduction-btn {
+    top: 35em;
+  }
+
+  .container-anc {
+    outline: 1px solid red;
+  }
+
+}
+
 @media (max-width: 720px) {
 
 }
