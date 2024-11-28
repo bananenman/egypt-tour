@@ -62,8 +62,11 @@ li, a, button {
     position: absolute;
     left: 1em;
     top: 18.8em;
+
     color: white;
     background-color: black;
+    cursor: pointer;
+
     font-size: 30px;
     padding: 10px;
     border-radius: 20px;
@@ -90,7 +93,6 @@ li, a, button {
 
     height: 40em;
     width: 40em;
-    outline: 1px solid red;
 }
 
 /*
