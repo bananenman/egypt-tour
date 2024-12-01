@@ -7,6 +7,16 @@ export default defineNuxtConfig({
     }
   },
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
+
   image: {
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dndfdqrtr/image/upload/v1730551197',

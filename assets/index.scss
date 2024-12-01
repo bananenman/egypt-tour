@@ -36,20 +36,23 @@ li, a, button {
   position: absolute;
   top: 15em;
   left: 12em;
-}
-.item-content h1{
-  color: white;
-  font-size: 150px;
-}
-.item-content h2{
-  color: white;
-  font-size: 150px;
-}
-.item-content p{
-  color: white;
-  padding-left: 5px;
-  padding-top: 30px;
-  font-size: 30px;
+
+  h1{
+    color: white;
+    font-size: 150px;
+  }
+
+  h2{
+    color: white;
+    font-size: 150px;
+  }
+
+  p{
+    color: white;
+    padding-left: 5px;
+    padding-top: 30px;
+    font-size: 30px;
+  }
 }
 .introduction-btn{
   transition: all 0.3s ease 0s;
@@ -77,31 +80,34 @@ li, a, button {
   position: relative;
   padding-top: 5em;
   padding-left: 5em;
-}
-.container-anc > img{
-  height: 30em;
-  width: 25%;
-  box-shadow: -20px -24px rgb(255, 203, 164);
-  transition: all 0.3s ease 0s;
-}
-.container-anc > img:hover{
-  z-index: 1;
-  width: 35%;
-  height: 35em;
-}
-.anc-content{
-  position: absolute;
-  left: 40em;
-  top: 5em;
-  font-size: 20px;
-}
-.anc-content p{
-  padding-top: 1em;
-  max-width: 60%;
+
+  img{
+    height: 30em;
+    width: 25%;
+    box-shadow: -20px -24px rgb(255, 203, 164);
+    transition: all 0.3s ease 0s;
+  }
+  img:hover{
+    z-index: 1;
+    width: 35%;
+    height: 35em;
+  }
+
+  .anc-content{
+    position: absolute;
+    left: 40em;
+    top: 5em;
+    font-size: 20px;
+  
+    p{
+      padding-top: 1em;
+      max-width: 60%;
+    }
+  }
 }
 .pop-egy{
   position: absolute;
-  top: 56.5em;
+  top: 58em;
   left: 10em;
   font-size: 28px;
   font-weight: 800;
@@ -128,39 +134,45 @@ li, a, button {
   width: 20em;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-}
-.item img {
-  border-radius: 8px;
-  transition: 0.35s;
-}
-.item img:hover {
-  transform: scale(1.2);
+
+  img {
+    border-radius: 8px;
+    transition: 0.35s;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+  }
 }
 .grid-content {
   padding: 16px;
-}
-.grid-content h1{
-  color: #666;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.grid-content p{
-  color: #666;
-  font-size: 15px;
-  line-height: 1.3;
-}
-.grid-content .item-btn {
-  display: inline-block;
-  padding: 4px 8px;
-  background-color: #333;
-  border-radius: 4px;
-  margin-top: 16px;
-  color: #fff;
-  transition: all 0.3s ease 0s;
-}
-.grid-content .item-btn:hover{
-  background-color: rgb(7, 127, 167);
-  cursor: pointer;
+
+  h1{
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .item-btn {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #333;
+    border-radius: 4px;
+    margin-top: 16px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+
+  .item-btn:hover{
+    background-color: rgb(7, 127, 167);
+    cursor: pointer;
+  }
 }
 /*#endregion */
 
@@ -189,16 +201,17 @@ li, a, button {
   .container {
     outline: 1px solid red;
     height: 40em;
-  }
-  .item-content h1 {
-    font-size: 60px;
-  }
-  .item-content h2 {
-    font-size: 60px;
-  }
 
-  .introduction-btn {
-    top: 35em;
+    .item-content h1 {
+      font-size: 60px;
+    }
+    .item-content h2 {
+      font-size: 60px;
+    }
+
+    .introduction-btn {
+      top: 35em;
+    }
   }
 
   .container-anc {
@@ -221,15 +234,18 @@ li, a, button {
   .item-content{
     left: 2em;
     top: 7em;
-  }
-  .item-content h1{
-    font-size: 30px;
-  }
-  .item-content h2{
-    font-size: 30px;
-  }
-  .item-content p{
-    font-size: 15px;
+
+    h1{
+      font-size: 30px;
+    }
+
+    h2{
+      font-size: 30px;
+    }
+
+    p{
+      font-size: 15px;
+    }
   }
   .introduction-btn{
     top: 18em;
@@ -238,33 +254,37 @@ li, a, button {
 
   .container-anc{
     padding-left: 4em;
-  }
-  .container-anc > img{
-    position: relative;
-    left: 2em;
-    top: -0.5em;
-    height: 13em;
-    width: 10em;
-  }
-  .container-anc > img:hover{
-    height: 13em;
-    width: 10em;
-    z-index: 1;
-    transform: scale(1.2);
+
+    img{
+      position: relative;
+      left: 2em;
+      top: -0.5em;
+      height: 13em;
+      width: 10em;
+    }
+
+    img:hover{
+      height: 13em;
+      width: 10em;
+      z-index: 1;
+      transform: scale(1.2);
+    }
   }
   .anc-content{
     font-size: 12px;
     left: 0.5em;
     top: 25em;
-  }
-  .anc-content h1{
-    left: 4em;
-    position: relative;
-  }
-  .anc-content p{
-    position: relative;
-    left: 1.5em;
-    max-width: 90%;
+
+    h1{
+      left: 4em;
+      position: relative;
+    }
+
+    p{
+      position: relative;
+      left: 1.5em;
+      max-width: 90%;
+    }
   }
   .pop-egy{
     top: 54em;

@@ -1,3 +1,8 @@
+
+li, a, button {
+    color: #ffff;
+}
+
 /*#region Buttons*/
 .cta {
     margin-left: 20px;
@@ -22,8 +27,9 @@ header {
     align-items: center;
     position: absolute;
     width: 100%;
-    background-color: transparent;
+    background-color: rgb(219, 193, 170);
     z-index: 1;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   
     padding: 30px 10%;
 }

@@ -93,8 +93,8 @@
   
 </template>
   
-<style>
-  @import url("../assets/index.css");
+<style lang="scss">
+  @use "~/assets/index.scss";
 </style>
   
 <script setup>

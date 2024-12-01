@@ -18,6 +18,6 @@
   </NuxtLayout>
 </template>
   
-<style>
-  @import url("/assets/error.css");
+<style lang = "scss">
+  @use "~/assets/error.scss";
 </style>

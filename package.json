@@ -20,5 +20,8 @@
     "nuxt": "^3.13.0",
     "nuxt-server-utils": "^0.0.7",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0"
   }
 }
