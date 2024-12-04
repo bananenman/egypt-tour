@@ -19,6 +19,7 @@
     "leaflet": "^1.9.4",
     "nuxt": "^3.13.0",
     "nuxt-server-utils": "^0.0.7",
+    "sass-embedded": "^1.82.0",
     "vue": "latest"
   },
   "devDependencies": {

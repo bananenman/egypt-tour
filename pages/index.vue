@@ -108,8 +108,8 @@
   })
   function tourScroll() {
     tours.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
+      block: "start",
+      behavior: "smooth"
     })
   }
 

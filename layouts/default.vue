@@ -5,8 +5,7 @@
         <nav>
             <ul class="nav__links">
               <li class="index"><a href="/">Home</a></li>
-              <li class="about-eg"><a href="about-eg">About</a></li>
-              <li class="prices"><a href="prices">Prices</a></li>
+              <li class="about-eg"><a href="about">About</a></li>
               <li class="route"><a href="route">Routes</a></li>
 
               <li class="dropdown">
@@ -14,7 +13,6 @@
                 <div class="dropdown-content" id="Dropdown">
                   <a href="/">Home</a>
                   <a href="/">About</a>
-                    <a href="/">Prices</a>
                     <a href="/">Routes</a>
                     <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
                 </div>

@@ -100,7 +100,7 @@ async function ShowMap() {
   const fromWaypoint = [JSON.stringify(LocLat.location.latitude), JSON.stringify(LocLong.location.longitude)]; // latutude, longitude
   const fromWaypointMarker = L.marker(fromWaypoint).addTo(map).bindPopup("Your City");
 
-  const toWaypoint = [22.336944, 31.625556]; // latitude, longitude
+  const toWaypoint = [27.277336, 28.200442]; // latitude, longitude
   const toWaypointMarker = L.marker(toWaypoint).addTo(map).bindPopup("Abu Simbel, Egypt");
 
   const turnByTurnMarkerStyle = {
