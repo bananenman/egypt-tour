@@ -36,56 +36,59 @@
         </div>
       </div>
 
-      <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
-      <div class="container-items">
-        <div class="item item-1">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_card_kj3rxy.webp" alt="Great Pyramids of Giza"/>
-          <div class="grid-content">
-            <h1>Pyramids of Giza</h1>
-            <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
-            <a href="/info/giza-tour" class="item-btn">Tour</a>
-          </div>
-        </div>
 
-        <div class="item item-2">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-abu_nzsblx.webp" alt="Abu Simbel - Temple of Ramses the second"/>
-          <div class="grid-content">
-            <h1>Abu Simbel</h1>
-            <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
-            <a href="/info/abu-tour" class="item-btn">Tour</a>
+      <div class="index_tour_container">
+        <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
+        <div class="container-items">
+          <div class="item item-1">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_card_kj3rxy.webp" alt="Great Pyramids of Giza"/>
+            <div class="grid-content">
+              <h1>Pyramids of Giza</h1>
+              <p>The Pyramids of Giza - one of the most recognizable landmarks.</p>
+              <a href="/info/giza-tour" class="item-btn">Tour</a>
+            </div>
           </div>
-        </div>
 
-        <div class="item item-3">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-luxor_v0tajz.webp" alt="Luxor Temple & Tomb"/>
-          <div class="grid-content">
-            <h1>Luxor Temple & Tomb</h1>
-            <p>The Luxor Temple may have been the place where crowning took place.</p>
-            <a href="/info/luxor-tour" class="item-btn">Tour</a>
+          <div class="item item-2">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-abu_nzsblx.webp" alt="Abu Simbel - Temple of Ramses the second"/>
+            <div class="grid-content">
+              <h1>Abu Simbel</h1>
+              <p>Ramses II's great temple, decorated with wall paintings and guarded by statues.</p>
+              <a href="/info/abu-tour" class="item-btn">Tour</a>
+            </div>
           </div>
-        </div>
-        <div class="item item-4">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fg4jo0.webp"/>
-          <div class="grid-content">
-            <h1>Cruising the Nile</h1>
-            <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
-            <a href="/info/nile-tour" class="item-btn">Tour</a>
+
+          <div class="item item-3">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-luxor_v0tajz.webp" alt="Luxor Temple & Tomb"/>
+            <div class="grid-content">
+              <h1>Luxor Temple & Tomb</h1>
+              <p>The Luxor Temple may have been the place where crowning took place.</p>
+              <a href="/info/luxor-tour" class="item-btn">Tour</a>
+            </div>
           </div>
-        </div>
-        <div class="item item-5">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_h9jgfk.webp"/>
-          <div class="grid-content">
-            <h1>Diving the Red Sea</h1>
-            <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
-            <a href="/info/dive-tour" class="item-btn">Tour</a>
+          <div class="item item-4">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fg4jo0.webp"/>
+            <div class="grid-content">
+              <h1>Cruising the Nile</h1>
+              <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
+              <a href="/info/nile-tour" class="item-btn">Tour</a>
+            </div>
           </div>
-        </div>
-        <div class="item item-6">
-          <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_sun9yg.webp"/>
-          <div class="grid-content">
-            <h1>Egypt's White Desert</h1>
-            <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
-            <a href="/info/salt-tour" class="item-btn">Tour</a>
+          <div class="item item-5">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_h9jgfk.webp"/>
+            <div class="grid-content">
+              <h1>Diving the Red Sea</h1>
+              <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
+              <a href="/info/dive-tour" class="item-btn">Tour</a>
+            </div>
+          </div>
+          <div class="item item-6">
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_sun9yg.webp"/>
+            <div class="grid-content">
+              <h1>Egypt's White Desert</h1>
+              <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
+              <a href="/info/salt-tour" class="item-btn">Tour</a>
+            </div>
           </div>
         </div>
       </div>

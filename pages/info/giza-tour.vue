@@ -8,19 +8,29 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
     <body>
+      <div class="loader_effect" id="loader_effect">
+        <div class="loader" id="loader"></div>
+      </div> 
+
       <div class="info-container">
           <nuxt-img provider="cloudinary" src="/pyramids_pc2vmw.webp" alt="Great Pyramids of Giza"/>
           <div class="info-content">
             <div class="info-text">
               <h1>Pyramids of Giza</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
-              <button class="info-btn" @click="getLocation()">Route</button>
-              <button class="info-btn-t">Book a Tour</button>
+              <button class="route_btn" @click="getLocation()">Route</button>
+              <button class="book_btn">Book a Tour</button>
             </div>
           </div>
       </div>
 
-      <div id="map" class="map"></div>
+      <div class="map_container">
+        <div class="map" id="map">
+          <div class="map_text" id="map_text">
+          
+          </div>
+        </div>
+      </div>
     </body>
   
 </template>
@@ -43,11 +53,36 @@ definePageMeta({
 
 
 <script>
-import L from 'leaflet'
+import L from 'leaflet';
+const config = useRuntimeConfig()
+
+
+function scrollMap() {
+  const map = document.getElementById("map");
+  const body = document.body;
+
+  map.style.border = "5px solid red";
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("loader_effect").style.display = "block";
+  body.style.height = "100%";
+  body.style.overflowY = "hidden";
+
+  setTimeout(function() {
+    body.style.height = "";
+    body.style.overflowY = "";
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loader_effect").style.display = "none";
+    map.scrollIntoView({
+    block: "center",
+    behavior: "smooth"
+  })
+  }, 3000)
+}
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(ShowMap, showError);
+    setTimeout(() => scrollMap(), 1000);
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -71,7 +106,7 @@ function showError(error) {
 }
 
 async function ShowMap() {
-  var myAPIKey = "113bfd19b1f24f6687cdc8c00b83a638";
+  let myAPIKey = MAP_KEY;
   const LocLat = await $fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e5e49754549f44b2aede82be3c9680f4")
   const LocLong = await $fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e5e49754549f44b2aede82be3c9680f4")
 

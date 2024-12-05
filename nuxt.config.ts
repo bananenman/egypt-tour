@@ -15,6 +15,9 @@ export default defineNuxtConfig({
         },
       },
     },
+    define: {
+      MAP_KEY: JSON.stringify(process.env.MAP_KEY)
+    }
   },
 
   image: {
@@ -24,17 +27,9 @@ export default defineNuxtConfig({
       apiKey: '752348868543861',
     },
   },  
-
-
-  // { font-family: Playfair; src: url('../font/PlayfairDisplay.ttf'); font-display: swap; } 
-  googleFonts: {
-    families: {
-      Playfair: true
-    }
-  } 
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ['@nuxtjs/i18n', "nuxt-server-utils", "@nuxtjs/cloudinary", '@nuxt/image-edge', '@nuxtjs/google-fonts'],
+  modules: ["nuxt-server-utils", "@nuxtjs/cloudinary", '@nuxt/image-edge'],
   compatibilityDate: '2024-08-29',
 })
