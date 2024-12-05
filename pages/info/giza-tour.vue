@@ -54,35 +54,30 @@ definePageMeta({
 
 <script>
 import L from 'leaflet';
-const config = useRuntimeConfig()
-
+const body = document.body;
 
 function scrollMap() {
   const map = document.getElementById("map");
-  const body = document.body;
-
   map.style.border = "5px solid red";
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("loader_effect").style.display = "block";
-  body.style.height = "100%";
-  body.style.overflowY = "hidden";
 
-  setTimeout(function() {
-    body.style.height = "";
-    body.style.overflowY = "";
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("loader_effect").style.display = "none";
-    map.scrollIntoView({
+  body.style.height = "";
+  body.style.overflowY = "";
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("loader_effect").style.display = "none";
+
+  map.scrollIntoView({
     block: "center",
     behavior: "smooth"
   })
-  }, 3000)
 }
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(ShowMap, showError);
-    setTimeout(() => scrollMap(), 1000);
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("loader_effect").style.display = "block";
+    body.style.height = "100%";
+    body.style.overflowY = "hidden";
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -184,5 +179,6 @@ async function ShowMap() {
     }).addTo(map);
 
   }, error => console.log(err));
+  await setTimeout(scrollMap, 2000)
 }  
 </script>

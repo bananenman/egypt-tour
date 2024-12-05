@@ -49,8 +49,8 @@
   </body>
 </template>
 
-<style>
-  @import url("../assets/layout/layout.css");
+<style lang = "scss">
+  @use "~/assets/layout/layout.scss";
 </style>
 
 <script setup>
