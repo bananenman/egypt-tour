@@ -226,8 +226,8 @@ footer{
     display: none;
     position: relative;
     background-color: #f9f9f9;
-	min-width: 90%;
-	min-height: 100%;
+	width: 90%;
+	height: 100%;
     z-index: 1;
     animation-duration: 1s;
 
@@ -257,7 +257,8 @@ footer{
     .dropdown-content {
 		display: none;
 		position: fixed;
-		right: 0;
+        width: 70%;
+		right: 6em;
 		top: 0;
 
 		background-color: rgb(219, 193, 170);
@@ -294,7 +295,7 @@ footer{
 	.exit_button {
 		position: relative;
 		left: 80%;
-		top: 1.7em;
+		top: 1em;
 
 		background-color: transparent;
 		border: none;
@@ -326,6 +327,7 @@ footer{
             }
         }
     }
+
     footer{
         bottom: -30rem;
         .footerContainer {
@@ -341,4 +343,19 @@ footer{
     }
     
 }
+
+@media (max-width: 355px) {
+    footer{
+        bottom: -30rem;
+        .footerContainer {
+            .footerNav ul li {
+                a{
+                font-size: 1em;
+                margin: 0.2em;
+                }
+            }
+        }
+    }
+}
+
 /*#endregion */

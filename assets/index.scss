@@ -55,17 +55,18 @@ li, a, button {
     }
   }
   .introduction-btn{
-    transition: all 0.3s ease 0s;
     position: absolute;
-    color: white;
-    background-color: rgb(114, 38, 13);
+    top: 50em;
+    left: 14em;
+
     width: 300px;
     padding: 14px;
+    color: white;
+    background-color: rgb(114, 38, 13);
     border-color: white;
     border-radius: 25px;
     font-size: 14px;
-    top: 50em;
-    left: 14em;
+    transition: all 0.3s ease 0s;
   }
   .introduction-btn:hover{
     cursor: pointer;
@@ -197,24 +198,17 @@ li, a, button {
 
 /*#region Media Query*/
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   li.index, li.about-eg, li.prices, li.route, .cta {
     display: none;
   }
 
-  .item-content{
-    left: 3em;
-  }
-
-  .introduction-btn {
-    left: 4em;
-  }
 
   
 }
 
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .background {
     min-height: 25em;
   }
@@ -301,6 +295,148 @@ li, a, button {
     .container-items{
       top: 5em;
       right: 2em;
+
+      .item {
+        width: 14em;
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          transition: 0.35s;
+        }
+      }
+
+      .grid-content {
+        padding: 12px;
+    
+        h1{
+          color: #666;
+          font-size: 20px;
+          margin-bottom: 8px;
+        }
+    
+        p{
+          color: #666;
+          font-size: 15px;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 355px) {
+
+  .container-anc{
+    height: 75em;
+    
+    .txt-anc {
+      top: 3em;
+      left: 2em;
+      width: 80%;
+    }
+    .anc-content{
+      width: 100%;
+  
+      h1{
+        left: 0em;
+        position: relative;
+      }
+  
+      p{
+        position: relative;
+        left: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .background {
+    min-height: 25em;
+  }
+  
+  .container{
+    height: auto;
+
+    .item-content{
+      left: 2em;
+      top: 10em;
+  
+      h1{
+        font-size: 40px;
+      }
+  
+      h2{
+        font-size: 40px;
+      }
+  
+      p{
+        font-size: 15px;
+        width: 70%;
+        padding-top: 15px;
+      }
+    }
+    .introduction-btn{
+      width: 50%;
+      top: 23em;
+      left: 2em;
+    }
+  }
+
+  .container-anc{
+    height: 65em;
+    left: 0em;
+
+    img{
+      position: relative;
+      left: 6em;
+      top: 2em;
+      height: 13em;
+      width: 10em;
+    }
+
+    img:hover{
+      height: 13em;
+      width: 10em;
+      z-index: 1;
+      transform: scale(1.2);
+    }
+
+    .txt-anc {
+      top: 15em;
+      left: -8em;
+      width: 80%;
+    }
+
+    .anc-content{
+      width: 100%;
+  
+      h1{
+        left: 0.5em;
+        position: relative;
+      }
+  
+      p{
+        position: relative;
+        left: 1em;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .index_tour_container{
+    position: relative;
+    height: 165em;
+    top: 0em;
+
+    .pop-egy{
+      left: 1.5em;
+      top: 2em;
+      width: 80%;
+      font-size: 28px;
+    }
+    .container-items{
+      right: 3em;
 
       .item {
         width: 14em;

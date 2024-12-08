@@ -43,10 +43,10 @@
           </div>
           <div class="footerNav">
               <ul>
-                  <li><a href="/">About Egypt</a></li>
+                  <li><a href="/">About</a></li>
                   <li><a href="/">Prices</a></li>
                   <li><a href="/">Routes</a></li>
-                  <li><a href="mailto:bananenmaninquiries@gmail.com">Contact Us</a></li>
+                  <li><a href="mailto:bananenmaninquiries@gmail.com">Contact</a></li>
               </ul>
           </div>
           
@@ -76,6 +76,8 @@ function Dropdown()
   document.getElementById("dropdown_content").style.animationName = "slide-in"
   document.getElementById("header").style.backgroundColor = "transparent"
   document.getElementById("dropdown_content").style.display = "block"
+
+  document.body.style.overflow = "hidden"
   
 }
 
@@ -85,6 +87,7 @@ function CloseDropdown()
   document.getElementById("dropdown_content").style.animationName = "slide-out"
   setTimeout(function(){
     document.getElementById("dropdown_content").style.display = "none"
+    document.body.style.overflow = ""
   }, 900)
   
 }
