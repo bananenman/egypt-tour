@@ -86,7 +86,10 @@ function getLocation() {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
+      body.style.height = "";
+      body.style.overflowY = "";
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loader_effect").style.display = "none";
       break;
     case error.POSITION_UNAVAILABLE:
       x.innerHTML = "Location information is unavailable."
@@ -179,6 +182,6 @@ async function ShowMap() {
     }).addTo(map);
 
   }, error => console.log(err));
-  await setTimeout(scrollMap, 2000)
+  await setTimeout(scrollMap, 1000)
 }  
 </script>
