@@ -76,8 +76,7 @@ function Dropdown()
   document.getElementById("dropdown_content").style.animationName = "slide-in"
   document.getElementById("header").style.backgroundColor = "transparent"
   document.getElementById("dropdown_content").style.display = "block"
-
-  document.body.style.overflow = "hidden"
+  /* document.body.style.overflow = "hidden" */
   
 }
 
@@ -87,7 +86,7 @@ function CloseDropdown()
   document.getElementById("dropdown_content").style.animationName = "slide-out"
   setTimeout(function(){
     document.getElementById("dropdown_content").style.display = "none"
-    document.body.style.overflow = ""
+    /* document.body.style.overflow = "" */
   }, 900)
   
 }
