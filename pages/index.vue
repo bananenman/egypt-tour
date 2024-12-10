@@ -109,18 +109,24 @@
   definePageMeta({
     layout: 'default'
   })
-  function tourScroll() {
-    tours.scrollIntoView({
-      block: "start",
-      behavior: "smooth"
-    })
+
+</script>
+
+<script>
+
+function tourScroll() {
+  tours.scrollIntoView({
+    block: "start",
+    behavior: "smooth"
+  })
 
   var userLang = navigator.language || navigator.userLanguage; 
   alert ("The language is: " + userLang);
-  }
+}
 
-  function GithubRedirect()
-  {
-    window.open("https://bananenman.vercel.app/")
-  }
+function GithubRedirect()
+{
+  window.open("https://bananenman.vercel.app/")
+}
+
 </script>

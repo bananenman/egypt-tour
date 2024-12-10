@@ -16,7 +16,8 @@ export default defineNuxtConfig({
       },
     },
     define: {
-      MAP_KEY: JSON.stringify(process.env.MAP_KEY)
+      MAP_KEY: JSON.stringify(process.env.MAP_KEY),
+      MONGODB_URI: JSON.stringify(process.env.MONGODB_URI)
     }
   },
 
