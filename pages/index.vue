@@ -16,12 +16,12 @@
           <div class="item-content">
             <h1>Welcome to</h1>
             <h2>Egypt</h2>
-            <p>We offer multiple amazing tours through it's Cities & sights. {{ callCount }}</p>
+            <p>We offer multiple amazing tours through it's Cities & sights.</p>
           </div>
         </div>
 
         <div class="btns-div">
-          <button class="introduction-btn" @click="create()">Available Tours</button>
+          <button class="introduction-btn" @click="submit()">Available Tours</button>
         </div>
       </div>
 
@@ -101,7 +101,7 @@
 </style>
   
 <script setup>
-  
+
   useSeoMeta({
     title: 'Home',
   })
@@ -114,28 +114,6 @@
 
 
 <script>
-
-
-  async function create() {
-
-    let formData = new FormData();
-    //append another data
-    const formdata = {
-        name: "Sieg",
-        email: "Siegeg@mail.mail",
-        password: "real224$&/!@234rabbit"
-    };
-
-    for (const item in formdata) {
-      formData.append(item, formdata[item]);
-    }
-
-    return await useFetch("/api/users", {
-        method: "PUT",
-        body: formData,
-        headers: {"cache-control": "no-cache"},
-      });
-  }
 
   function tourScroll() {
 
@@ -152,5 +130,23 @@
   {
     window.open("https://bananenman.vercel.app/")
   }
+
+  async function submit() {
+
+  return await $fetch("/api/users", { 
+    headers: {
+        "Content-Type": "multipart/form-data",
+    },
+    method: 'POST',
+    body: {
+      firstName: 'fenter',
+      lastName: 'Fetnsoson',
+      email: 'FEINING@AMDMASD.RRE.mail.ru',
+      phoneNumber: '445',
+      company: 'FentRepresentattion',
+      shortDescription: 'Fent since 9.56y lol lfao',
+    },
+  })
+}
 
 </script>

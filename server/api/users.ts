@@ -1,26 +1,32 @@
 import { MongoClient } from "mongodb";
-import { User } from '~/server/models/user.model'
-// Create a new client and connect to MongoDB
+
+// * Create a new client and connect to MongoDB
 const uri = process.env.MONGODB_URI || "";
 const client = new MongoClient(uri);
+
+// * Imports Schema + pass crypting thingy
+import { User } from '~/server/models/user.model'
 import bcrypt from 'bcrypt';
 
 export default defineEventHandler(async (event) => {
+  const formData = await readBody(event);
   const data = await User.findOne({
     name: "Sieger"
   })
+
+  const allData = await User.find()
 
   if(!data) {
     try {
         // Connect to database and access collection
         const database = client.db("EgyTours");
-        const userData = database.collection("EgyTours");
+        const userData = database.collection("Users");
 
         // Create a document to insert
         const CryptPass = await bcrypt.hash("a3$b44c", 10);
         const doc = {
-          name: "Sieger",
-          email: "StringUser@mainmaiaqo.eez",
+          name: formData,
+          email: "e",
           password: CryptPass,
         }
 
@@ -40,5 +46,6 @@ export default defineEventHandler(async (event) => {
     console.log("USER ALREADY EXISTS")
   }
 
-  return User;
+  return allData;
+
 });
