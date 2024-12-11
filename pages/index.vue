@@ -16,12 +16,12 @@
           <div class="item-content">
             <h1>Welcome to</h1>
             <h2>Egypt</h2>
-            <p>We offer multiple amazing tours through it's Cities & sights.</p>
+            <p>We offer multiple amazing tours through it's Cities & sights. {{ callCount }}</p>
           </div>
         </div>
 
         <div class="btns-div">
-          <button class="introduction-btn" @click="tourScroll()">Available Tours</button>
+          <button class="introduction-btn" @click="create()">Available Tours</button>
         </div>
       </div>
 
@@ -107,26 +107,50 @@
   })
     
   definePageMeta({
-    layout: 'default'
+    layout: 'default',
   })
 
 </script>
 
+
 <script>
 
-function tourScroll() {
-  tours.scrollIntoView({
-    block: "start",
-    behavior: "smooth"
-  })
 
-  var userLang = navigator.language || navigator.userLanguage; 
-  alert ("The language is: " + userLang);
-}
+  async function create() {
 
-function GithubRedirect()
-{
-  window.open("https://bananenman.vercel.app/")
-}
+    let formData = new FormData();
+    //append another data
+    const formdata = {
+        name: "Sieg",
+        email: "Siegeg@mail.mail",
+        password: "real224$&/!@234rabbit"
+    };
+
+    for (const item in formdata) {
+      formData.append(item, formdata[item]);
+    }
+
+    return await useFetch("/api/users", {
+        method: "PUT",
+        body: formData,
+        headers: {"cache-control": "no-cache"},
+      });
+  }
+
+  function tourScroll() {
+
+    tours.scrollIntoView({
+      block: "start",
+      behavior: "smooth"
+    })
+
+    var userLang = navigator.language || navigator.userLanguage; 
+    alert ("The language is: " + userLang);
+  }
+
+  function GithubRedirect()
+  {
+    window.open("https://bananenman.vercel.app/")
+  }
 
 </script>
