@@ -139,12 +139,10 @@
     },
     method: 'POST',
     body: {
-      firstName: 'fenter',
-      lastName: 'Fetnsoson',
-      email: 'FEINING@AMDMASD.RRE.mail.ru',
-      phoneNumber: '445',
-      company: 'FentRepresentattion',
-      shortDescription: 'Fent since 9.56y lol lfao',
+      firstName: 'John ',
+      lastName: 'Doe',
+      email: 'example@mail.com',
+      password: 'myPassIsSafeNow9'
     },
   })
 }

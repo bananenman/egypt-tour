@@ -23,10 +23,11 @@ export default defineEventHandler(async (event) => {
         const userData = database.collection("Users");
 
         // Create a document to insert
-        const CryptPass = await bcrypt.hash("a3$b44c", 10);
+        const CryptPass = await bcrypt.hash(`${formData.password}`, 10);
         const doc = {
-          name: formData,
-          email: "e",
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
           password: CryptPass,
         }
 
