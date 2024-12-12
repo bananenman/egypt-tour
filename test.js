@@ -1,6 +1,11 @@
 import bcrypt from 'bcrypt'
+import { User } from './server/models/user.model'
 
-const storedHashedPassword = '{$2b$10$FJw5bUXZr4EfEyRGX5k4k.i4rcGf92HzB65PCmdgb.JVjwszVZLI2}';
+const data = User.findOne({
+  name: "John",
+})
+
+const storedHashedPassword = data.password;
 const userInputPassword = 'myPasswordIsSafeNow';
 
 bcrypt.compare(userInputPassword, storedHashedPassword, (err, result) => {

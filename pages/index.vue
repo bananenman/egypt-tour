@@ -133,7 +133,7 @@
 
   async function submit() {
 
-  return await $fetch("/api/users", { 
+  await $fetch("/api/users", { 
     headers: {
         "Content-Type": "multipart/form-data",
     },
