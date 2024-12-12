@@ -1,4 +1,4 @@
-const storedHashedPassword = '';
+const storedHashedPassword = '$2b$10$FJw5bUXZr4EfEyRGX5k4k.i4rcGf92HzB65PCmdgb.JVjwszVZLI2';
 const userInputPassword = 'myPasswordIsSafeNow9';
 
 bcrypt.compare(userInputPassword, storedHashedPassword, (err, result) => {
