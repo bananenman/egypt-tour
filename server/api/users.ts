@@ -12,7 +12,7 @@ export default defineEventHandler(async (event) => {
 
   const formData = await readBody(event);
   const data = await User.findOne({
-    lastName: formData.lastName
+    lastName: formData.lastName,
     email: formData.email
   })
 
