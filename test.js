@@ -14,7 +14,7 @@ bcrypt.compare(userInputPassword, storedHashedPassword, (err, result) => {
         console.error('Error comparing passwords:', err);
         return;
     }
-
+    
 if (result) {
     // Passwords match, authentication successful
     console.log('Passwords match! User authenticated.');
