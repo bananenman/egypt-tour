@@ -1,6 +1,6 @@
 
 import { MongoClient } from "mongodb";
-var uri = process.env.MONGODB_URI;
+var uri = mongodb+srv://bananenmaninquiries:<db_password>@bananacluster.rymxo.mongodb.net/?retryWrites=true&w=majority&appName=BananaCluster:
 // Create a new client and connect to MongoDB
 const client = new MongoClient(uri);
 
