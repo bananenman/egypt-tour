@@ -16,7 +16,7 @@
           <div class="item-content">
             <h1>Welcome to</h1>
             <h2>Egypt</h2>
-            <p>We offer multiple amazing tours through it's Cities & sights.</p>
+            <p>We offer multiple amazing touers through it's Cities & sights.</p>
           </div>
         </div>
 
