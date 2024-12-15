@@ -21,7 +21,7 @@
         </div>
 
         <div class="btns-div">
-          <button class="introduction-btn" @click="submit()">Available Tours</button>
+          <button class="introduction-btn" @click="tourScroll()">Available Tours</button>
         </div>
       </div>
 
@@ -116,14 +116,13 @@
 <script>
 
   function tourScroll() {
-
     tours.scrollIntoView({
       block: "start",
       behavior: "smooth"
     })
 
-    var userLang = navigator.language || navigator.userLanguage; 
-    alert ("The language is: " + userLang);
+   /*  var userLang = navigator.language || navigator.userLanguage; 
+    alert ("The language is: " + userLang); */
   }
 
   function GithubRedirect()

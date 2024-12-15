@@ -41,7 +41,7 @@ li, a, button {
     .info-text{
         position: relative;
         left: 65em;
-        top: -35em;
+        bottom: 36em;
         width: 50em;
         height: 38em;
 
@@ -232,15 +232,69 @@ li, a, button {
                 width: 150px;
             }
         }
-    }
+}
 
     .map_container{
         height: 60em;
         .map{
             left: 0em;
-            outline: 1px solid red;
             width: 100%;
             height: 35em;
         }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .info-container{
+        position: relative;
+        width: 100%;
+        height: 40em;
+        top: 7em;
+
+        img{
+            width: auto;
+            height: 30%;
+            position: relative;
+            left: 1.8em;
+            top: 1em;
+        }
+        .info-text{
+            position: relative;
+            left: 0em;
+            top: 0em;
+            width: 100%;
+
+            h1{
+                position: relative;
+                font-size: 25px;
+                max-width: 60%;
+                left: 4em;
+                top: 1em;
+            }
+
+            p{
+                position: relative;
+                font-weight: 600;
+                font-size: 14px;
+                width: 85%;
+                left: 3em;
+                top: 3em;
+            }
+
+            .route_btn{
+                position: relative;
+                left: 2em;
+                top: 3em;
+                font-size: 22px;
+                width: 150px;
+            }
+            .book_btn{
+                position: relative;
+                left: 3em;
+                top: 3em;
+                font-size: 22px;
+                width: 150px;
+            }   
+        }   
     }
 }

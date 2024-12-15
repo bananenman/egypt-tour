@@ -10,21 +10,21 @@ import bcrypt from 'bcrypt';
 
 export default defineEventHandler(async (event) => {
 
+  // Connect to database and access collection
+  const database = client.db("EgyTours");
+  const userData = database.collection("Users");
+
+
   const formData = await readBody(event);
-  const data = await User.findOne({
-    lastName: formData.lastName,
-    email: formData.email
+  const data = await userData.findOne({
+    email: formData.email,
   })
 
-  console.log(formData)
+  console.log(data?.password)
 
   if(!data) {
     console.log("nodata")
     try {
-        // Connect to database and access collection
-        const database = client.db("EgyTours");
-        const userData = database.collection("Users");
-
         // Create a document to insert
         const CryptPass = await bcrypt.hash(`${formData.password}`, 10);
         const doc = {
@@ -47,27 +47,25 @@ export default defineEventHandler(async (event) => {
   }
 
   if(data) {
-    console.log("user found")
     const storedHashedPassword = `${data.password}`;
     const userInputPassword = `${formData.password}`;
     
     bcrypt.compare(userInputPassword, storedHashedPassword, (err, result) => {
         if (err) {
-            // Handle error
-            console.error('Error comparing passwords:', err);
-            return;
+          // Handle error
+          console.error('Error comparing passwords:', err);
+          return;
         }
     
     if (result) {
-        // Passwords match, authentication successful
-        console.log('Passwords match! User authenticated.');
+      // Passwords match, authentication successful
+      console.log('Passwords match! User authenticated.');
     } else {
-        // Passwords don't match, authentication failed
-        console.log('Passwords do not match! Authentication failed.');
+      // Passwords don't match, authentication failed
+      console.log('Passwords do not match! Authentication failed.');
     }
     });
     return "Email is already being used.";
-    console.log("USER ALREADY EXISTS")
-  }
+  } 
 
 });

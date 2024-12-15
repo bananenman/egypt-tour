@@ -4,12 +4,14 @@
     <html lang="en"></html>
     <meta name="title" content="Diving the Red Sea">
     <meta name="description" content="Tour in the Red Sea">
-    <link async href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/egy-dive_info_jol3ki.webp"/>
+        <picture>
+          <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1734190696/dive_info_small_u8ndou.webp">
+          <source class="ee" media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1734190690/dive_info_big_oaywhb.webp">
+          <nuxt-img provider="cloudinary" src="/dive_info_big_oaywhb.webp" alt="Luxor Temple & Tomb"/>
+        </picture>
           <div class="info-content">
             <div class="info-text">
               <h1>Diving in the Red Sea</h1>

@@ -1,18 +1,20 @@
 
 <template>
-    <title>Luxor's Temples & Tombs</title>
+    <title>Luxor's Temples</title>
     <html lang="en"></html>
-    <meta name="title" content="Luxor's Temples & Tombs">
-    <meta name="description" content="Tour around Luxor's Temples & Tombs">
-    <link async href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <meta name="title" content="Luxor's Temples">
+    <meta name="description" content="Tour around Luxor's Temples">
 
     <body>
       <div class="info-container">
-          <nuxt-img provider="cloudinary" src="/egy-luxor_info_znvoed.webp" alt="Luxor Temple & Tomb"/>
+        <picture>
+          <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1734190651/luxor_info_small_izpynt.webp">
+          <source class="ee" media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1734190656/luxor_info_big_ffaaba.webp">
+          <nuxt-img provider="cloudinary" src="/luxor_info_big_ffaaba.webp" alt="Luxor Temple & Tomb"/>
+        </picture>
           <div class="info-content">
             <div class="info-text">
-              <h1>Luxor's Temples & Tombs</h1>
+              <h1>Luxor's Temples</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="getLocation()">Route</button>
               <button class="book_btn">Book a Tour</button>
@@ -32,7 +34,7 @@
 <script setup>
 
 useSeoMeta({
-  title: "Luxor's Temples & Tombs",
+  title: "Luxor's Temples",
 })
   
 definePageMeta({
