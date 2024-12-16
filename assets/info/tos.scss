@@ -1,0 +1,109 @@
+body{
+    font-family:Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:28px;
+    margin:0;
+    color: black;
+}
+
+*{
+    color: black;
+}
+
+/*#region headers*/
+h1{
+    font-size:40px;
+    line-height:60px
+}
+h1,h2{
+    font-weight:700
+}
+h2{
+    font-size:32px;
+    line-height:48px
+}
+h3{
+    font-size:24px;
+    line-height:36px;
+}
+h3,h4{
+    font-weight:700;
+}
+h4{
+    font-size:20px;
+    line-height:30px;
+}
+h5{
+    font-size:16px;
+}
+h5,h6{
+    line-height:24px;
+    font-weight:700;
+}
+h6{
+    font-size:cacl(16px);
+}
+/*#endregion headers*/
+
+/*#endregion headers*/
+
+/*#region container*/
+.container{
+    position: relative;
+    top: 8em;
+    width:90%;
+    height: 145em;
+    margin:0 auto;
+
+    .prohib_container{
+        li{
+            color: black;
+        }
+    }
+
+    .warrant_container{
+        li{
+            color: black;
+        }
+    }
+
+    .link_container{
+        li{
+            color: black;
+        }
+    }
+
+    .approve_link_container{
+        li{
+            color: black;
+        }
+    }
+
+    .approved_container{
+        li{
+            color: black;
+        }
+    }
+
+    .disclaimer_container{
+        li{
+            color: black;
+        }
+    }
+
+}
+
+/*#endregion container*/
+
+.footer{
+    border-top:1px solid #000;
+    margin:32px 0 0;
+    padding:16px 0;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .container {
+        height: 390em;
+    }
+}
