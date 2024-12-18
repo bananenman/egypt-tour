@@ -26,7 +26,7 @@
       </div>
 
       <div class="container-anc">
-        <nuxt-img class="anc-egy" provider="cloudinary" loading="lazy" src="/ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
+        <nuxt-img class="anc-egy" provider="cloudinary" src="/ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">
             <h1>Ancient Egypt</h1>
