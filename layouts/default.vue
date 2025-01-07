@@ -8,7 +8,7 @@
             <ul class="nav__links">
               <li class="index"><a href="/">Home</a></li>
               <li class="about-eg"><a href="about">About</a></li>
-              <li class="route"><a href="route">Routes</a></li>
+              <li class="route"><a href="/#pop_egy">Routes</a></li>
 
               <li class="dropdown">
                 <a class="dropbtn" @click="Dropdown()"><img src="/MenuPng.webp" alt="Dropdown Button" class="drop__button"></a>
@@ -18,12 +18,12 @@
                   <a href="/">About</a>
                   <a href="/">Routes</a>
                   <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
-                  <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="log-drop-down">Log In</a>
+                  <a href="log-in" aria-label="Log in to EgyTour" class="log-drop-down">Log In</a>
                   <div class="drop_socialIcons">
                     <a href="/facebook" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
                     <a href="/twitter" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
                     <a href="/pinterest" aria-label="Visit my Github Profile"><i class="bx bxl-pinterest-alt"></i></a>
-                    <a href="/instagram" aria-label="Visit my Github Profile"><i class="bx bxl-instagram"</i></a>
+                    <a href="/instagram" aria-label="Visit my Github Profile"><i class="bx bxl-instagram"></i></a>
                   </div>
                 </div>
               </li>
@@ -31,7 +31,7 @@
             </ul>
         </nav>
         <a href="mailto:bananenmaninquiries@gmail.com" id="cta-button" aria-label="Contact us via Mail"><button class="cta">Contact Us</button></a>
-        <a href="info/giza-tour#map_container" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
+        <a href="log-in" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
     </header>
     <slot />
 
@@ -54,7 +54,7 @@
           
       </div>
       <div class="footerBottom">
-          <p>Made by<span class="designer" @click="SiteRedirect()">David</span></p>
+          <a href="https://bananenman.vercel.app/" target="_blank">Made by<span class="designer">David</span></a>
       </div>
     </footer>
   </body>
@@ -65,10 +65,9 @@
 </style>
 
 <script setup>
-  function SiteRedirect()
-  {
-    window.open("https://bananenman.vercel.app/")
-  }
+function bob() {
+  console.log("bob")
+}
 </script>
 
 <script>
