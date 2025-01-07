@@ -26,8 +26,12 @@
           </div>
       </div>
 
-      <div class="map_container">
+      <div class="map_container"> 
+        <div class="map_info">
+          <p>*Note that this map provides a route for car travel</p>
+        </div>
         <div class="map" id="map">
+
           <div class="map_text" id="map_text">
           
           </div>
@@ -60,7 +64,7 @@ const body = document.body;
 
 function scrollMap() {
   const map = document.getElementById("map");
-  map.style.border = "5px solid red";
+  map.style.border = "5px solid #8b4513";
 
   body.style.height = "";
   body.style.overflowY = "";

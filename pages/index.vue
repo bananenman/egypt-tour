@@ -38,7 +38,7 @@
 
 
       <div class="index_tour_container">
-        <p class="pop-egy" id="tours">Tourist Attractions we visit on our Tours</p>
+        <p class="pop_egy" id="pop_egy">Tourist Attractions we visit on our Tours</p>
         <div class="container-items">
           <div class="item item-1">
             <nuxt-img loading="lazy" provider="cloudinary" src="/pyramids_card_kj3rxy.webp" alt="Great Pyramids of Giza"/>
@@ -116,18 +116,13 @@
 <script>
 
   function tourScroll() {
-    tours.scrollIntoView({
+    pop_egy.scrollIntoView({
       block: "start",
       behavior: "smooth"
     })
 
    /*  var userLang = navigator.language || navigator.userLanguage; 
     alert ("The language is: " + userLang); */
-  }
-
-  function GithubRedirect()
-  {
-    window.open("https://bananenman.vercel.app/")
   }
 
   async function submit() {
