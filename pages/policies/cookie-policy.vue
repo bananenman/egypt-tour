@@ -1,6 +1,4 @@
-A cookie policy for EgyTour, operating primarily in the European Union, is required in English.
-
-
+<template>
 EgyTour Cookie Policy
 
 This Cookie Policy explains how EgyTour uses cookies and similar technologies on its website and app.  By using our website or app, you consent to the use of cookies as described in this policy.
@@ -35,3 +33,5 @@ We may update this Cookie Policy from time to time.  Any changes will be posted 
 Contact us:
 
 If you have any questions about this Cookie Policy, please contact us at [Insert Contact Email Address Here].
+
+</template>

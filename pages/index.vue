@@ -125,20 +125,5 @@
     alert ("The language is: " + userLang); */
   }
 
-  async function submit() {
-
-  await $fetch("/api/users", { 
-    headers: {
-        "Content-Type": "multipart/form-data",
-    },
-    method: 'POST',
-    body: {
-      firstName: 'John ',
-      lastName: 'Doe',
-      email: 'example@mail.com',
-      password: 'myPassIsSafeNow9'
-    },
-  })
-}
 
 </script>

@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 // * Create a new client and connect to MongoDB
 const uri = process.env.MONGODB_URI || "";
-const client = new MongoClient(uri);
+//const client = new MongoClient(uri);
 
 // * Imports Schema + pass crypting thingy
 import { User } from '~/server/models/user.model'
