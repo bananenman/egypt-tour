@@ -144,6 +144,7 @@ li, a, button {
           text-decoration: underline;
         }
 
+
         input{
           position: relative;
           top: 0.5em;
@@ -151,6 +152,7 @@ li, a, button {
 
           width: 80%;
           padding: 1.4em;
+
           border-radius: 5em;
           background-color: rgb(114, 38, 13);
 
@@ -167,7 +169,7 @@ li, a, button {
           left: 13%;
           height: 5em;
           width: 72%;
-
+          
           .check{
             position: absolute;
             bottom: 4.5em;
@@ -179,7 +181,7 @@ li, a, button {
             position: relative;
             left: 1em;
           }
-
+          
           p{
 
             a{

@@ -5,6 +5,7 @@
       <source class="ee" media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1735614495/cairo-alt_ydd9af.webp">
       <nuxt-img class="background" provider="cloudinary" src="/cairo-alt_ydd9af.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
     </picture>
+
     <form method="POST" class="form">
       <div class="form_container">
         <h1>Sign Up</h1>
