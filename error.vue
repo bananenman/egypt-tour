@@ -7,7 +7,7 @@
       <body>
         <div class="container">
           <div class="content">
-              <p class="p1">An error has occured.
+              <p class="p1">{{ error.statusCode + ' ' + error.message }}
                 <NuxtLink class="home" to="/">
                   Go Home
                 </NuxtLink>
@@ -21,3 +21,7 @@
 <style lang = "scss">
   @use "~/assets/error.scss";
 </style>
+
+<script setup lang="ts">
+const error = useError();
+</script>
