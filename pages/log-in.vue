@@ -1,4 +1,9 @@
 <template>
+  <title>Log In</title>
+  <html lang="en"></html>
+  <meta name="title" content="Log In">
+  <meta name="description" content="Log In to EgyTour">
+
   <div class="container">
     <picture>
       <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1735614494/cairo-alt-mobile_m0cctd.webp">
@@ -38,8 +43,22 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-
+<script setup>
+ async function submit() {
+  await $fetch("/api/log-in", { 
+    headers: {
+        "Content-Type": "multipart/form-data",
+    },
+    method: 'POST',
+    body: {
+      firstName: 'John ',
+      lastName: 'Doe',
+      email: 'example@mail.com',
+      password: 'myPassIsSafeNow9'
+    },
+  })
+  // hmmm https://obfuscator.io/
+}
 </script>
 
 <style lang="scss">

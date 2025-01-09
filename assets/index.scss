@@ -19,10 +19,6 @@ li, a, button {
 }
 .container {
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  justify-content: flex-start;
-  flex-direction: column;
   position: relative;
   width: 100%;
   height: 61em;
@@ -94,13 +90,15 @@ li, a, button {
 
   .txt-anc {
     position: relative;
-    top: 8em;
-    right: 10em;
+    top: 7em;
+    right: 10%;
     width: 40%;
   }
 
   .anc-content{
     font-size: 20px;
+    width: 100%;
+    outline: 1px solid red;
   
     p{
       padding-top: 1em;
@@ -199,8 +197,7 @@ li, a, button {
   }
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .background {
     min-height: 25em;
   }

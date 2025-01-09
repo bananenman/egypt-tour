@@ -84,7 +84,6 @@ header {
 footer{
     background-color: #111;
     position: relative;
-    bottom: -20rem;
 
 		.footerContainer{
 			width: 100%;
@@ -109,16 +108,15 @@ footer{
 						color: white;
 						opacity: 1;
 						transition: 0.5s;
-				}
-				a:hover{
+				    }
+			    }
+                a:hover{
 					background-color: white;
 				}
 				a:hover i{
 					color: black;
 				}
-
-			}
-		}
+		    }
 
 		.footerNav{
 			background-color: #111;
@@ -329,7 +327,7 @@ footer{
     }
 
     footer{
-        bottom: -30rem;
+        bottom: -10rem;
         .footerContainer {
             .footerNav ul li a{
                 font-size: 1em;
@@ -347,7 +345,7 @@ footer{
     }
 
     footer{
-        bottom: -30rem;
+        bottom: -10rem;
         .footerContainer {
             .footerNav ul li {
                 a{

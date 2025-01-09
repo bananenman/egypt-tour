@@ -22,8 +22,17 @@
           </div>
       </div>
 
-      <div id="map" class="map"></div>
-      
+      <div class="map_container"> 
+        <div class="map_info">
+          <p>*Note that this map provides a route for car travel</p>
+        </div>
+        <div class="map" id="map">
+
+          <div class="map_text" id="map_text">
+          
+          </div>
+        </div>
+      </div>
     </body>
   
 </template>
@@ -45,11 +54,31 @@ definePageMeta({
 </script>
 
 <script>
-import L from 'leaflet'
+import L from 'leaflet';
+const body = document.body;
+
+function scrollMap() {
+  const map = document.getElementById("map");
+  map.style.border = "5px solid #8b4513";
+
+  body.style.height = "";
+  body.style.overflowY = "";
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("loader_effect").style.display = "none";
+
+  map.scrollIntoView({
+    block: "center",
+    behavior: "smooth"
+  })
+}
 
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(ShowMap, showError);
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("loader_effect").style.display = "block";
+    body.style.height = "100%";
+    body.style.overflowY = "hidden";
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -58,7 +87,10 @@ function getLocation() {
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
+      body.style.height = "";
+      body.style.overflowY = "";
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loader_effect").style.display = "none";
       break;
     case error.POSITION_UNAVAILABLE:
       x.innerHTML = "Location information is unavailable."
@@ -73,7 +105,7 @@ function showError(error) {
 }
 
 async function ShowMap() {
-  var myAPIKey = "113bfd19b1f24f6687cdc8c00b83a638";
+  let myAPIKey = MAP_KEY;
   const LocLat = await $fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e5e49754549f44b2aede82be3c9680f4")
   const LocLong = await $fetch("https://api.geoapify.com/v1/ipinfo?&apiKey=e5e49754549f44b2aede82be3c9680f4")
 
@@ -151,5 +183,6 @@ async function ShowMap() {
     }).addTo(map);
 
   }, error => console.log(err));
+  await setTimeout(scrollMap, 1000)
 }  
 </script>

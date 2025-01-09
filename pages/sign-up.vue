@@ -1,4 +1,9 @@
 <template>
+  <title>Sign Up</title>
+  <html lang="en"></html>
+  <meta name="title" content="Home">
+  <meta name="description" content="Sign Up to EgyTour">
+
   <div class="container">
     <picture>
       <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1735614494/cairo-alt-mobile_m0cctd.webp">
@@ -40,7 +45,7 @@
 
 <script setup>
  async function submit() {
-  await $fetch("/api/users", { 
+  await $fetch("/api/sign-up", { 
     headers: {
         "Content-Type": "multipart/form-data",
     },
