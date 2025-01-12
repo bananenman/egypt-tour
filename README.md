@@ -15,15 +15,15 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=bananenman&repo=egypt-tour&theme=synthwave">
 </p>
 
-### [+] Description
+### [📃] Description
 EgyTour is a Website that represents a mockup for booking tours in Egypt.
 
-### [+] Installation
+### [⬇️] Installation
  - `git clone https://github.com/bananenman/egypt-tour.git`
  - `cd egypt-tour`
  - `npm run dev`
 
-### [+] Features
+### [📋] Features
  - Geolocation via geoapify
  - Daily changing prices
 
