@@ -3,6 +3,10 @@ li, a, button {
     color: #ffff;
 }
 
+button, a{
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -78,6 +82,48 @@ header {
         background-color: rgba(173, 216, 230, 1);
         padding: 10px;
         border-radius: 15px;
+    }
+}
+
+
+.cookieConsent{
+
+    .cookieContainer{
+        display: flex;
+    }
+}
+.cookieContainer{
+    position: fixed;
+    display: none;
+    flex-wrap: wrap;
+    top: 75%;
+    left: 80%;
+
+    width: 15%;
+    z-index: 1;
+    background-color: #CFB095;
+    padding: 0.5em;
+    border-radius: 10px;
+
+    .cookieText{
+
+        p{
+            margin-bottom: 0.5em;
+
+            a{
+                color: black;
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            color: white;
+            background-color: rgb(114, 38, 13);
+            border-color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: all 0.3s ease 0s;
+        }
     }
 }
 
@@ -167,8 +213,6 @@ footer{
 				color: yellow;
 				font-weight: 400;
 				margin: 0px 5px;
-			  
-				cursor: pointer;
 			}
 		}
 	}
@@ -219,7 +263,6 @@ footer{
 	}
     .drop__button {
         width: 40px;
-        cursor: pointer;
     }
 
     .dropdown-content {
@@ -245,9 +288,6 @@ footer{
 		text-align: center;
         }
     }
-	.drop__close{
-		cursor: pointer;
-	}
 
     .nav__links li a:hover {
         padding: 6px;
