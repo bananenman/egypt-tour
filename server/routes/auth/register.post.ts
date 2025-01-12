@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
   const data = await userData.findOne({
     email: email,
   })
-  const userPass = hashPassword(password)
+  const userPass = (await hashPassword(password)).toString()
 
   if(!data) {
     console.log("No User Found")
@@ -71,7 +71,7 @@ export default defineEventHandler(async (event) => {
   }
 
   if(data) {
-    return "E-Mail already in use!";
+    return;
   }
 
 });

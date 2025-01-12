@@ -31,7 +31,7 @@
             <label class="remember_label" for="remember">Remember me?</label>
             <p>By clicking Sign Up, you agree to our <a href="/policies/privacy-policy">Terms of Service</a> and <a href="/policies/privacy-policy">Privacy Policy.</a></p>
           </div>
-          <input type="submit" value="Sign Up" @click="onRegisterClick">
+          <input type="submit" value="Sign Up">
         </div>
 
         <div class="sign_div">
