@@ -1,3 +1,6 @@
+const ONE_DAY = 60 * 60 * 24 * 1000;
+const ONE_WEEK = ONE_DAY * 7;
+
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -24,6 +27,26 @@ export default defineNuxtConfig({
       MONGODB_URI: JSON.stringify(process.env.MONGODB_URI)
     }
   },
+
+  runtimeConfig: {
+    cookieName: "__session",
+    cookieSecret: "secret",
+    cookieExpires: ONE_DAY.toString(),
+    cookieRememberMeExpires: ONE_WEEK.toString(),
+  },
+
+  imports: {
+    dirs: [
+      // Scan all composables within dir
+      'composables/**'
+    ]
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 
   image: {
     cloudinary: {

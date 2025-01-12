@@ -1,94 +1,117 @@
-<template>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-4 is-offset-4">
-          <h2 class="title has-text-centered">Register!</h2>
-          
-          <form method="post" @submit.prevent="register">
-            <div class="field">
-              <label class="label">Username</label>
-              <div class="control">
-                <input
-                  type="text"
-                  class="input"
-                  name="username"
-                  v-model="username"
-                  required 
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input
-                  type="email"
-                  class="input"
-                  name="email"
-                  v-model="email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Password</label>
-              <div class="control">
-                <input
-                  type="password"
-                  class="input"
-                  name="password"
-                  v-model="password"
-                  required
-                />
-              </div>
-            </div>
-            <div class="control">
-              <button type="submit" class="button is-dark is-fullwidth">Register</button>
-            </div>
-          </form>
+<script lang="ts" setup>
+import { FetchError } from "ofetch";
 
-          <div class="has-text-centered" style="margin-top: 20px">
-            Already got an account? <nuxt-link to="/login">Login</nuxt-link>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
+definePageMeta({
+  middleware: ["guest-only"],
+  layout: false,
+});
 
-<script>
+const { login } = useAuth();
 
-export default {
-  data() {
-    return {
-      username: '',
-      email: '',
-      password: '',
-      error: null
-    }
+const form = reactive({
+  data: {
+    email: "admin@gmail.com",
+    password: "password",
+    rememberMe: false,
   },
+  error: "",
+  pending: false,
+});
 
-  methods: {
-    async register() {
-      try {
-        await this.$axios.post('register', {
-          username: this.username,
-          email: this.email,
-          password: this.password
-        })
 
-        await this.$auth.loginWith('local', {
-          data: {
-          email: this.email,
-          password: this.password
-          },
-        })
+async function onLoginClick() {
+  try {
+    form.error = "";
+    form.pending = true;
 
-        this.$router.push('/')
-      } catch (e) {
-        this.error = e.response.data.message
-      }
+    await login(form.data.email, form.data.password, form.data.rememberMe);
+
+    await navigateTo('/private');
+  } catch (error) {
+    console.error(error);
+    if (!(error instanceof FetchError)) {
+      throw error;
     }
+
+    form.error = error.data.message;
+  } finally {
+    form.pending = false;
   }
 }
 </script>
+
+<template>
+  <div class="min-h-screen flex flex-col">
+    <main class="mx-auto max-w-sm w-full">
+      <form class="mb-6 p-12 bg-slate-900 rounded shadow" @submit.prevent="onLoginClick">
+        <p
+          v-if="form.error"
+          class="mb-3 px-3 py-1.5 w-full border rounded border-red-400 text-sm text-center text-red-400"
+        >
+          {{ form.error }}
+        </p>
+        <div class="mb-3">
+          <label for="email" class="mb-1 inline-block font-semibold text-sm text-slate-200">Email address</label>
+          <input
+            id="email"
+            v-model="form.data.email"
+            type="email"
+            class="px-3 py-1.5 w-full border rounded border-slate-700 bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-700 focus:border-transparent"
+            required
+          >
+        </div>
+        <div class="mb-3">
+          <label for="password" class="mb-1 inline-block font-semibold text-sm text-slate-200">Password</label>
+          <input
+            id="password"
+            v-model="form.data.password"
+            type="password"
+            class="px-3 py-1.5 w-full border rounded border-slate-700 bg-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-slate-700 focus:border-transparent"
+            required
+          >
+        </div>
+        <div class="mb-3 flex justify-end items-center">
+          <label for="remember-me" class="mr-1 text-sm text-light-100">Remember me</label>
+          <input
+            id="remember-me"
+            v-model="form.data.rememberMe"
+            type="checkbox"
+            class="w-4 h-4 accent-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:border-transparent"
+          >
+        </div>
+        <div>
+          <button
+            type="submit"
+            :disabled="form.pending"
+            class="px-3 py-1.5 w-full rounded bg-light-100 font-semibold text-sm text-slate-950 hover:bg-light-700 focus:outline-none focus:bg-light-700 transition-colors"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+      <div class="mb-6 text-center">
+        <NuxtLink to="/" class="text-xs text-slate-400 transition-colors hover:text-light-100">Go back home</NuxtLink>
+      </div>
+      <div>
+        <h3 class="mb-1 font-bold">Help</h3>
+        <p class="text-sm text-slate-400">
+          For demo purpose, this application comes with predefined credentials you can use to login:
+        </p>
+        <ul class="text-sm text-slate-400">
+          <li><code class="text-slate-200">admin@gmail.com</code> with <code class="text-slate-200">password</code></li>
+          <li><code class="text-slate-200">user@gmail.com</code> with <code class="text-slate-200">password</code></li>
+        </ul>
+      </div>
+    </main>
+    <BaseFooter class="mt-auto" />
+  </div>
+</template>
+
+<style>
+
+.min-h-screen{
+  position: relative;
+  top: 2em;
+}
+
+</style>
