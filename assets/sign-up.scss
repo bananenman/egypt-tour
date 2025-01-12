@@ -50,7 +50,7 @@ li, a, button {
         width: 30%;
       }
 
-      .uname_div{
+      .email_div{
         position: relative;
         left: 2em;
         bottom: 2em;
@@ -90,7 +90,7 @@ li, a, button {
         
       }
 
-      .upass_div{
+      .password_div{
         position: relative;
         left: 2em;
         bottom: 1em;
@@ -133,6 +133,26 @@ li, a, button {
         bottom: 1.5em;
         height: 11em;
 
+        input{
+          position: relative;
+          top: 0.5em;
+          left: 3em;
+    
+          width: 80%;
+          padding: 1.4em;
+    
+          border-radius: 5em;
+          background-color: rgb(114, 38, 13);
+          color: white;
+    
+          transition: all 0.3s ease 0s;
+        }
+    
+        input:hover{
+          border-radius: 1em;
+          cursor: pointer;
+        }
+
         .link{
           position: relative;
           left: 55%;
@@ -144,27 +164,6 @@ li, a, button {
           text-decoration: underline;
         }
 
-
-        input{
-          position: relative;
-          top: 0.5em;
-          left: 3em;
-
-          width: 80%;
-          padding: 1.4em;
-
-          border-radius: 5em;
-          background-color: rgb(114, 38, 13);
-          color: white;
-
-          transition: all 0.3s ease 0s;
-        }
-
-        input:hover{
-          border-radius: 1em;
-          cursor: pointer;
-        }
-
         .check_container{
           position: relative;
           left: 13%;
@@ -172,15 +171,15 @@ li, a, button {
           width: 72%;
           
           .check{
-            position: absolute;
-            bottom: 4.5em;
-            right: 5em;
+            position: relative;
+            top: -0em;
+            left: 0.1em;
             width: 1em;
           }
 
           .remember_label{
             position: relative;
-            left: 1em;
+            left: 0.3em;
           }
           
           p{

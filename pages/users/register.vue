@@ -11,18 +11,18 @@
       <nuxt-img class="background" provider="cloudinary" src="/cairo-alt_ydd9af.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
     </picture>
 
-    <form method="POST" class="form">
+    <form class="form">
       <div class="form_container">
         <h1>Sign Up</h1>
-        <div class="uname_div">
-          <label for="uname"><b>E-Mail</b></label>
-          <input type="email" placeholder="Enter your E-Mail" name="uname" required>
+        <div class="email_div">
+          <label for="email"><b>E-Mail</b></label>
+          <input type="email" id="email_input" placeholder="Enter your E-Mail" name="email" required>
         </div>
 
 
-        <div class="upass_div">
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter your Password" name="psw" required>
+        <div class="password_div">
+          <label for="password"><b>Password</b></label>
+          <input type="password" id="pass_input" placeholder="Enter your Password" name="password" required>
         </div>
 
         <div class="log_div">
@@ -31,7 +31,7 @@
             <label class="remember_label" for="remember">Remember me?</label>
             <p>By clicking Sign Up, you agree to our <a href="/policies/privacy-policy">Terms of Service</a> and <a href="/policies/privacy-policy">Privacy Policy.</a></p>
           </div>
-            <input formaction="/api/sign-up" type="submit" value="Submit">
+          <input type="submit" value="Sign Up">
         </div>
 
         <div class="sign_div">
@@ -43,21 +43,23 @@
   </div>
 </template>
 
-<script setup>
- async function submit() {
-  await $fetch("/api/sign-up", { 
-    headers: {
-        "Content-Type": "multipart/form-data",
-    },
-    method: 'POST',
-    body: {
-      firstName: 'John ',
-      lastName: 'Doe',
-      email: 'example@mail.com',
-      password: 'myPassIsSafeNow9'
+<script lang="ts" setup>
+import { signIn } from 'next-auth/react';
+
+
+  useSeoMeta({
+    title: 'Sign Up',
+  })
+    
+  definePageMeta({
+    layout: 'default',
+    public: true,
+    auth: {
+      unauthenticatedOnly: true,
+      navigateAuthenticatedTo: '/',
     },
   })
-}
+
 </script>
 
 <style lang="scss">

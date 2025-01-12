@@ -8,7 +8,6 @@
     <body>
       <div class="container">
         <picture>
-          <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1730590496/cairo-mobile_ubhpin.webp">
           <source class="ee" media="(min-width: 1000px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1730635078/cairo_isnkeu.webp">
           <nuxt-img class="background" provider="cloudinary" src="/cairo_isnkeu.webp" alt="Panorama of Cairo taken on the Cairo tower"/>
         </picture>

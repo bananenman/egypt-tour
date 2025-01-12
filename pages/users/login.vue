@@ -31,12 +31,12 @@
             <label class="remember_label" for="remember">Remember me?</label>
             <p>By clicking Login, you agree to our <a href="/policies/privacy-policy">Terms of Service</a> and <a href="/policies/privacy-policy">Privacy Policy.</a></p>
           </div>
-            <button class="log-in" type="submit">Login</button>
+            <button class="log-in" @click="submit()" type="submit">Login</button>
         </div>
 
         <div class="sign_div">
           <p>No Account yet?</p>
-          <a class="link" href="/sign-up">SIGN UP</a>
+          <a class="link" href="/users/register">SIGN UP</a>
         </div>
       </div>
     </form> 
@@ -51,8 +51,6 @@
     },
     method: 'POST',
     body: {
-      firstName: 'John ',
-      lastName: 'Doe',
       email: 'example@mail.com',
       password: 'myPassIsSafeNow9'
     },
