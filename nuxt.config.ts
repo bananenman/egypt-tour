@@ -1,3 +1,6 @@
+const ONE_DAY = 60 * 60 * 24 * 1000;
+const ONE_WEEK = ONE_DAY * 7;
+
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -25,16 +28,36 @@ export default defineNuxtConfig({
     }
   },
 
+  runtimeConfig: {
+    cookieName: "__session",
+    cookieSecret: "secret",
+    cookieExpires: ONE_DAY.toString(),
+    cookieRememberMeExpires: ONE_WEEK.toString(),
+  },
+
+  imports: {
+    dirs: [
+      // Scan all composables within dir
+      'composables/**'
+    ]
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+
   image: {
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dndfdqrtr/image/upload/v1730551197',
       cloudName: 'dndfdqrtr',
       apiKey: '752348868543861',
     },
-  },  
+  },
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ["nuxt-server-utils", "@nuxtjs/cloudinary", '@nuxt/image-edge'],
+  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge'],
   compatibilityDate: '2024-08-29',
 })

@@ -1,9 +1,29 @@
-# EgyTour Source Code
+<h2 align="center"><u>Egypt-Tour</u></h2>
 
-## Dependencies
-1. sass
-2. sass-embedded
-3. nuxt 3
-4. nuxt image + image-edge
-5. leaflet
-6. cloudinary
+![Modern Tour Provider](public/sitepic.jpg)
+<h4 align="center"> Modern Tour Provider </h4>
+
+<p align="center">
+    <img src="https://img.shields.io/github/contributors/bananenman/egypt-tour?style=for-the-badge&color=cyan">
+<br>
+    <img src="https://img.shields.io/badge/Author-BananenMan-magenta?style=flat-square">
+    <img src="https://img.shields.io/badge/Open%20Source-Yes-orange?style=flat-square">
+    <img src="https://img.shields.io/badge/Maintained-No-cyan?style=flat-square">
+    <img src="https://img.shields.io/badge/Made%20In-Germany-green?style=flat-square">
+    <img src="https://img.shields.io/badge/Written%20In-CSS, JS, TS, HTML-blue?style=flat-square">
+<br>
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bananenman&repo=egypt-tour&theme=synthwave">
+</p>
+
+### [📃] Description
+EgyTour is a Website that represents a mockup for booking tours in Egypt.
+
+### [⬇️] Installation
+ - `git clone https://github.com/bananenman/egypt-tour.git`
+ - `cd egypt-tour`
+ - `npm run dev`
+
+### [📋] Features
+ - Geolocation via geoapify
+ - Daily changing prices
+

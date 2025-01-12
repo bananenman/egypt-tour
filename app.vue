@@ -1,4 +1,5 @@
 <template>
+  <NuxtRouteAnnouncer />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -19,9 +20,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Egypt Tour',
-  description: 'A Tour of Egypt',
+  description: 'EgyTour - A touring site for Egypt',
   ogTitle: 'Egypt Tour',
-  ogDescription: 'Tour of the country Egypt',
+  ogDescription: 'Tour of sights in Egypt',
   ogImage: 'favicon.ico',
   ogUrl: 'egypt-tour.vercel.app',
 })
@@ -30,6 +31,9 @@ useHead({
   titleTemplate: '%s - EgyTour',
   htmlAttrs: {
     lang: 'en',
-  }
+  },
+  meta: [
+    { name: 'description', content: 'EgyTour - A touring site for Egypt' }
+  ],
 })
 </script>

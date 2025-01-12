@@ -3,6 +3,10 @@ li, a, button {
     color: #ffff;
 }
 
+button, a{
+    cursor: pointer;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -81,10 +85,52 @@ header {
     }
 }
 
+
+.cookieConsent{
+
+    .cookieContainer{
+        display: flex;
+    }
+}
+.cookieContainer{
+    position: fixed;
+    display: none;
+    flex-wrap: wrap;
+    top: 75%;
+    left: 80%;
+
+    width: 15%;
+    z-index: 1;
+    background-color: #CFB095;
+    padding: 0.5em;
+    border-radius: 10px;
+
+    .cookieText{
+
+        p{
+            margin-bottom: 0.5em;
+
+            a{
+                color: black;
+                text-decoration: underline;
+            }
+        }
+
+        button{
+            color: white;
+            background-color: rgb(114, 38, 13);
+            border-color: white;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
 footer{
     background-color: #111;
     position: relative;
-    bottom: -20rem;
+    bottom: -10rem;
 
 		.footerContainer{
 			width: 100%;
@@ -109,16 +155,15 @@ footer{
 						color: white;
 						opacity: 1;
 						transition: 0.5s;
-				}
-				a:hover{
+				    }
+			    }
+                a:hover{
 					background-color: white;
 				}
 				a:hover i{
 					color: black;
 				}
-
-			}
-		}
+		    }
 
 		.footerNav{
 			background-color: #111;
@@ -168,8 +213,6 @@ footer{
 				color: yellow;
 				font-weight: 400;
 				margin: 0px 5px;
-			  
-				cursor: pointer;
 			}
 		}
 	}
@@ -209,8 +252,8 @@ footer{
     li.index, li.about-eg, li.prices, li.route, .cta, .log {
       display: none;
     }
-    li.dropdown {
-      position: absolute;
+    header{
+        padding: 25px;
     }
 
 	.dropbtn:hover{
@@ -219,16 +262,17 @@ footer{
 		border-radius: 0;
 	}
     .drop__button {
-      width: 40px;
-      cursor: pointer;
+        width: 40px;
     }
 
     .dropdown-content {
     display: none;
     position: fixed;
-    background-color: #f9f9f9;
+    background-color: rgb(219, 193, 170);
 	width: 90%;
 	height: 100%;
+    right: 0;
+    top: 0;
     z-index: 1;
     animation-duration: 1s;
 
@@ -238,61 +282,18 @@ footer{
         top: 2em;
 
         color: black;
-        border-radius: 12px;
-        
-        padding: 12px 16px;
-        text-decoration: none;
-        text-align: left;
-        }
-    }
-	.drop__close{
-		cursor: pointer;
-	}
-
-    .nav__links li a:hover {
-        padding: 6px;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-  
-    .dropdown-content {
-        width: 80%;
-		right: 0;
-		top: 0;
-
-		background-color: rgb(219, 193, 170);
-		z-index: 1;
-    }
-    
-    .dropdown-content a {
-     	color: black;
 		font-size: 24px;
 		padding: 12px 10px;
 		text-decoration: none;
 		text-align: center;
+        }
     }
-}
+
+    .nav__links li a:hover {
+        padding: 6px;
+    }
     
-@media only screen and (max-width: 600px) {
-    .background{
-      width: 100%;
-      height: 20rem;
-    }
-    .logo{
-      font-size: 30px;
-    }
-    .introduction-btn{
-      top: 18em;
-      left: 2em;
-    }
-
-    li.dropdown{
-        right: 0em;
-        top: 1.5em;
-    }
-
-	.exit_button {
+    .exit_button {
 		position: relative;
 		left: 80%;
 		top: 1em;
@@ -327,9 +328,29 @@ footer{
             }
         }
     }
+}
+
+@media only screen and (max-width: 720px) {
+    
+    .dropdown-content a {
+     	color: black;
+		font-size: 24px;
+		padding: 12px 10px;
+		text-decoration: none;
+		text-align: center;
+    }
+}
+    
+@media only screen and (max-width: 600px) {
+    .dropdown-content {
+        width: 90%;
+    }
+    .logo{
+      font-size: 30px;
+    }
 
     footer{
-        bottom: -30rem;
+        bottom: -10rem;
         .footerContainer {
             .footerNav ul li a{
                 font-size: 1em;
@@ -342,12 +363,8 @@ footer{
 
 @media only screen and (max-width: 400px) {
 
-    .dropdown-content {
-        width: 90%;
-    }
-
     footer{
-        bottom: -30rem;
+        bottom: -10rem;
         .footerContainer {
             .footerNav ul li {
                 a{

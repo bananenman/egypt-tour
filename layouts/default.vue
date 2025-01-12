@@ -1,7 +1,8 @@
 <template>
    <link async href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
-    <body>
+    <body class="">
+      <BaseHeader />
       <header id="header">
         <a class="logo" href="/">EgyTour</a>
         <nav>
@@ -18,7 +19,7 @@
                   <a href="/">About</a>
                   <a href="/">Routes</a>
                   <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
-                  <a href="log-in" aria-label="Log in to EgyTour" class="log-drop-down">Log In</a>
+                  <a href="/users/login" aria-label="Log in to EgyTour" class="log-drop-down">Log In / Sign Up</a>
                   <div class="drop_socialIcons">
                     <a href="/facebook" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
                     <a href="/twitter" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
@@ -31,9 +32,18 @@
             </ul>
         </nav>
         <a href="mailto:bananenmaninquiries@gmail.com" id="cta-button" aria-label="Contact us via Mail"><button class="cta">Contact Us</button></a>
-        <a href="log-in" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
+        <a href="/users/login" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
     </header>
     <slot />
+
+    <div id="cookie" class="cookieContainer">
+      <div class="cookieText">
+        <h1>Cookie Notice</h1>
+        <p>We use cookies, to ensure you get the best experience on our website.</p>
+        <p><a href="/policies/cookie-policy">Read More</a></p>
+        <button id="ck_close" @click="Notice()">Got it!</button>
+      </div>
+    </div>
 
     <footer>
       <div class="footerContainer">
@@ -65,12 +75,18 @@
 </style>
 
 <script setup>
-function bob() {
-  console.log("bob")
+if(!localStorage.getItem('popState')){
+  document.body.className = "cookieConsent"
 }
 </script>
 
+
 <script>
+
+function Notice() {
+  localStorage.setItem('popState','shown')
+  document.getElementById("cookie").style.display = "none";
+}
 
 function Dropdown() 
 {
