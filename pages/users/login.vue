@@ -70,7 +70,7 @@ async function onLoginClick() {
 
     await login(form.data.email, form.data.password, form.data.rememberMe);
 
-    await navigateTo('/private');
+    return navigateTo('/users/account')
   } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {

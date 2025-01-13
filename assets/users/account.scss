@@ -1,0 +1,36 @@
+@font-face { font-family: Playfair; src: url('../font/PlayfairDisplay.ttf'); font-display: swap; } 
+
+li, a, button {
+    font-family: Playfair;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.user_container{
+    position: relative;
+    top: 10em;
+    width: 100%;
+    height: 50em;
+  
+    code{
+        .dd{
+            position: relative;
+            width: 10%;
+            height: 5em;
+            top: 0em;
+            color: black;
+        } 
+    }
+}
+
+.form{
+    position: relative;
+    outline: 1px solid red;
+    width: 100%;
+    height: 30em;
+    a{
+        color: black;
+    }
+}
