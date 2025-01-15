@@ -1,4 +1,9 @@
 <template>
+    <title>Cookie Policy</title>
+    <html lang="en"></html>
+    <meta name="title" content="Cookie Policy">
+    <meta name="description" content="Cookie Policy for EgyTour">
+
     <body>
         <div class="container">
             <h1>EgyTour Cookie Policy</h1>
