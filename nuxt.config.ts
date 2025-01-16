@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     }
   },
 
+  css: [
+    'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+  ],
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -23,6 +27,9 @@ export default defineNuxtConfig({
       },
     },
     define: {
+      CLOUDINARY_CLOUD_NAME: JSON.stringify(process.env.CLOUDINARY_CLOUD_NAME),
+      CLOUDINARY_API_KEY: JSON.stringify(process.env.CLOUDINARY_API_KEY),
+      CLOUDINARY_API_SECRET: JSON.stringify(process.env.CLOUDINARY_API_SECRET),
       MAP_KEY: JSON.stringify(process.env.MAP_KEY),
       MONGODB_URI: JSON.stringify(process.env.MONGODB_URI)
     }
@@ -41,12 +48,6 @@ export default defineNuxtConfig({
       'composables/**'
     ]
   },
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
 
   image: {
     cloudinary: {

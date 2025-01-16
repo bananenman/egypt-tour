@@ -1,4 +1,9 @@
 <template>
+    <title>Terms of Service</title>
+    <html lang="en"></html>
+    <meta name="title" content="Terms of Service">
+    <meta name="description" content="Terms of Service for EgyTour">
+
   <body>
     <div class="page">
       <div class="translations-content-container">

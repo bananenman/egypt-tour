@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import { useRuntimeConfig } from "#imports";
-function defineNitroPlugin(def) {
+function defineNuxtPlugin(def) {
   return def;
 }
-export default defineNitroPlugin(async () => {
+export default defineNuxtPlugin(async () => {
   const config = useRuntimeConfig();
   if (!config.nuxtServerUtils?.mongodbUri) {
     console.warn(

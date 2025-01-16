@@ -5,12 +5,17 @@ import { verifyPassword } from "../../lib/password";
 export default defineEventHandler(async (event) => {
   const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
 
+
   const { email, password, rememberMe } = body;
   if (!email || !password) {
     throw createError({
       statusCode: 400,
       message: "Email address and password are required",
     });
+  }
+  
+  const emailIsValid = (email: string) => {
+    return /[\S]+@(gmail.com)/.test(email)
   }
 
   const userWithPassword = await findUserByEmail(email);
