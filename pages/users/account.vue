@@ -6,10 +6,21 @@
 
   <body>
     <div class="user_container">
-      <code>
-        <pre>current user: {{ JSON.stringify(currentUser, null, 2) }}</pre>
-        <button class="dd" @click="onLogoutClick" :disabled="form.pending">Logout</button>
-      </code>
+      <div class="user">
+        <i class="bx bx-user"></i>
+
+        <div class="user_mail">
+          <h1>Your Email:</h1>
+          <p>{{ currentUser.email }}</p>
+        </div>
+
+        <div class="user_pass">
+          <h1>Your Password:</h1>
+          <p>{{ currentUser.email }}</p>
+        </div>
+
+        <button class="logout" @click="onLogoutClick" :disabled="form.pending">Logout</button>
+      </div>
     </div>
   </body>
 </template>
