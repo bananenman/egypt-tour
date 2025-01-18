@@ -11,6 +11,7 @@
     <img src="https://img.shields.io/badge/Maintained-No-cyan?style=flat-square">
     <img src="https://img.shields.io/badge/Made%20In-Germany-green?style=flat-square">
     <img src="https://img.shields.io/badge/Written%20In-CSS, JS, TS, HTML-blue?style=flat-square">
+    ![Vercel](https://vercelbadge.vercel.app/api/bananenman/egypt-tour)
 <br>
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=bananenman&repo=egypt-tour&theme=synthwave">
 </p>
