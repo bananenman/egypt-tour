@@ -14,10 +14,6 @@ export default defineEventHandler(async (event) => {
     });
   }
   
-  const emailIsValid = (email: string) => {
-    return /[\S]+@(gmail.com)/.test(email)
-  }
-
   const userWithPassword = await findUserByEmail(email);
   if (!userWithPassword) {
     throw createError({

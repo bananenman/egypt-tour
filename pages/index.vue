@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="item item-4">
-            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fg4jo0.webp"/>
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-nile_fg4jo0.webp" alt="Cruising the Nile in Egypt"/>
             <div class="grid-content">
               <h1>Cruising the Nile</h1>
               <p>Egypt is defined by the Nile. For many, their cruise upon this waterway is their highlight.</p>
@@ -73,7 +73,7 @@
             </div>
           </div>
           <div class="item item-5">
-            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_h9jgfk.webp"/>
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-dive_h9jgfk.webp" alt="The Red Sea"/>
             <div class="grid-content">
               <h1>Diving the Red Sea</h1>
               <p>The Red Sea is very renowned among scuba divers due to the amount of sea life present.</p>
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div class="item item-6">
-            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_sun9yg.webp"/>
+            <nuxt-img loading="lazy" provider="cloudinary" src="/egy-salt_sun9yg.webp" alt="Egypt's White Desert"/>
             <div class="grid-content">
               <h1>Egypt's White Desert</h1>
               <p>Here in White Desert National Park, stand white chalk pinnacles stranded amid sand.</p>
