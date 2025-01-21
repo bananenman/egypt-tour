@@ -25,7 +25,6 @@ li, a, button {
 
 .info-container{
     position: relative;
-    width: auto;
     height: 55em;
     left: 0em;
     top: 7em;
@@ -40,7 +39,7 @@ li, a, button {
 
     .info-text{
         position: relative;
-        left: 65em;
+        left: 55%;
         bottom: 36em;
         width: 50em;
         height: 38em;
@@ -64,34 +63,35 @@ li, a, button {
         }
 
         .route_btn{
-        position: relative;
-        left: 1em;
-        top: 3em;
-    
-        color: white;
-        background-color: black;
-        cursor: pointer;
-    
-        font-size: 30px;
-        padding: 10px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
+            position: relative;
+            left: 1em;
+            top: 3em;
+        
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
         }
+
         .book_btn{
-        position: relative;
-        left: 2em;
-        top: 3em;
+            position: relative;
+            left: 2em;
+            top: 3em;
 
-        color: white;
-        background-color: black;
-        cursor: pointer;
+            color: white;
+            background-color: black;
+            cursor: pointer;
 
-        font-size: 30px;
-        padding: 10.5px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
+            font-size: 30px;
+            padding: 10.5px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
         }
     }
 }

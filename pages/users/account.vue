@@ -23,7 +23,7 @@
       </div>
 
       <div class="wishlist">
-        
+        <h1>Wishlist</h1>
       </div>
     </div>
   </body>
