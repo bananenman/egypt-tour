@@ -21,6 +21,10 @@
 
         <button class="logout" @click="onLogoutClick" :disabled="form.pending">Logout</button>
       </div>
+
+      <div class="wishlist">
+        
+      </div>
     </div>
   </body>
 </template>
