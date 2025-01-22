@@ -77,20 +77,13 @@ li, a, button {
             width: 200px;
         }
 
-        .book_btn{
+        i{
             position: relative;
-            left: 2em;
-            top: 3em;
+            top: 16%;
+            left: 5%;
+            font-size: 48px;
 
-            color: white;
-            background-color: black;
-            cursor: pointer;
-
-            font-size: 30px;
-            padding: 10.5px;
-            border-radius: 20px;
-            text-align: center;
-            width: 200px;
+            color: red;
         }
     }
 }

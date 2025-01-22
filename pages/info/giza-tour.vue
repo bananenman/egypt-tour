@@ -21,8 +21,7 @@
               <h1>Pyramids of Giza</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="getLocation()">Route</button>
-              <button class="book_btn">Book a Tour</button>
-              <i class='bx bx-bookmark'></i>
+              <i class='bx bxs-bookmark'></i>
             </div>
           </div>
       </div>
