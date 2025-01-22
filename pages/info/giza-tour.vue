@@ -31,10 +31,12 @@
         <div class="map_info">
           <p>*Note that this map provides a route for car travel</p>
         </div>
+        <button class="accordion">Section 1</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
         <div class="map" id="map">
-
           <div class="map_text" id="map_text">
-          
           </div>
         </div>
       </div>

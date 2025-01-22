@@ -14,4 +14,6 @@ export default defineEventHandler(async (event) => {
     const data = await prices.findOne({
         name: name,
     })
+
+   return data;
 });

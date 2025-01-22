@@ -1,1 +1,1 @@
-
+Sitemap: https://www.egypt-tour.vercel.app/sitemap.xml
