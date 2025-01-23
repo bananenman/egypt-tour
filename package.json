@@ -20,7 +20,7 @@
     "dotenv": "^16.4.7",
     "leaflet": "^1.9.4",
     "mongodb": "6.11",
-    "mongoose": "^8.8.4",
+    "mongoose": "^8.9.5",
     "next-auth": "~4.24.11",
     "nuxt": "^3.13.0",
     "sass": "^1.82.0",
