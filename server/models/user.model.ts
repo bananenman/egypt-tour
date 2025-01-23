@@ -5,6 +5,7 @@ const UserSchema = new Schema({
   email: String,
   password: String,
   roles: String,
+  bookmarks: Array,
 });
 
 export const User = model("User", UserSchema);
