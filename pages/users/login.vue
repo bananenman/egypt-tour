@@ -70,7 +70,7 @@ async function onLoginClick() {
 
     await login(form.data.email, form.data.password, form.data.rememberMe);
 
-    await location.reload();sd
+    await location.reload();
     await navigateTo('/users/account')
   } catch (error) {
     console.error(error);
