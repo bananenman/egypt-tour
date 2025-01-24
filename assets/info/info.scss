@@ -37,14 +37,14 @@ li, a, button {
         left: 4em;
     }
 
-    .info-text{
+    .info-text {
         position: relative;
         left: 55%;
         bottom: 36em;
         width: 50em;
         height: 38em;
 
-        h1{
+        h1 {
             position: relative;
             font-size: 80px;
             max-width: 40%;
@@ -52,7 +52,7 @@ li, a, button {
             top: 0.6em;
         }
 
-        p{
+        p {
             position: relative;
             font-weight: 600;
             font-size: 20px;
@@ -61,7 +61,7 @@ li, a, button {
             top: 3em;
         }
 
-        .route_btn{
+        .route_btn {
             position: relative;
             left: 1em;
             top: 3em;
@@ -77,13 +77,18 @@ li, a, button {
             width: 200px;
         }
 
-        i{
+        .bookmark_btn {
             position: relative;
-            top: 16%;
-            left: 5%;
-            font-size: 48px;
+            left: 6%;
+            top: 16.5%;
+            background-color: transparent;
+            border: 0;
+        }
 
-            color: red;
+        i{
+            font-size: 52px;
+
+            color: black;
         }
     }
 }

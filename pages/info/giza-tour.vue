@@ -21,7 +21,7 @@
               <h1>Pyramids of Giza</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="getLocation()">Route</button>
-              <button @click="onBookmarkClick()"><i class='bx bxs-bookmark'></i></button>
+              <button class="bookmark_btn" @click="onBookmarkClick()"><i id="book_img" class='bx bx-bookmark-alt-plus'></i></button>
             </div>
           </div>
       </div>
@@ -29,10 +29,6 @@
       <div class="map_container"> 
         <div class="map_info">
           <p>*Note that this map provides a route for car travel</p>
-        </div>
-        <button class="accordion">Section 1</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
         </div>
         <div class="map" id="map">
           <div class="map_text" id="map_text">
@@ -63,6 +59,7 @@ definePageMeta({
 <script>
 const { postBookmark } = useBookmark();
 const authUser = useAuthUser();
+let bool = 0;
 
 import L from 'leaflet';
 const body = document.body;
@@ -208,13 +205,21 @@ async function onBookmarkClick() {
   try {
     form.error = "";
     form.pending = true;
+
+    if(!bool) {
+      document.getElementById('book_img').className = 'bx bx-bookmark-alt-minus';
+      bool = 1;
+    } else{
+      document.getElementById('book_img').className = 'bx bxs-bookmark-alt-plus';
+      bool = 0;
+    }
       
-      if (authUser.value) {
-        await postBookmark(form.data.tourId, authUser.value.email);
-        return;
-      } 
-      await location.reload()
-      await location.replace('/users/login')
+    if (authUser.value) {
+      await postBookmark(form.data.tourId, authUser.value.email);
+      return;
+    } 
+    await location.reload()
+    await location.replace('/users/login')
     } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {

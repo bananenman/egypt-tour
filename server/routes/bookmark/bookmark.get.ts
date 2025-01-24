@@ -20,11 +20,11 @@ export default defineEventHandler(async (event) => {
         email: currentUser.email,
     })
 
-    if(!data.bookmark.tourId) {
+    if(!data!.bookmark.tourId) {
       return "You do not have any bookmarks.";
     }
 
-    if(data.bookmark.tourId) {
-        return data.bookmark.tourId;
+    if(data!.bookmark.tourId) {
+        return data!.bookmark.tourId;
     }
 });
