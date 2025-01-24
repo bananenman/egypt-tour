@@ -35,6 +35,7 @@ export default defineEventHandler(async (event) => {
         email: email,
         password: userPass,
         roles: 'USER',
+        bookmarks: [],
       }
 
       const result = await userData.insertOne(userDocument);

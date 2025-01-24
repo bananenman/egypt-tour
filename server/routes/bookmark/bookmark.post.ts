@@ -1,55 +1,59 @@
-import { MongoClient } from 'mongodb'
-import { useAuthUser } from '~/composables/useAuthUser';
+import { MongoClient, PullOperator, PushOperator } from 'mongodb'
 
 const uri = process.env.MONGODB_URI || "" 
 const client = new MongoClient(uri);
 
 export default defineEventHandler(async (event) => {
-    
-    // Checks if person is even logged in
-    const user = useAuthUser();
-    const currentUser = useAuthUser();
-    if (!user.value) {
-        return 'You must create an Account to bookmark tours!';
-    } 
 
-    const body = await readBody<{ tourId: string }>(event);
-    const { tourId } = body;
-
+    const body = await readBody<{ tourId: string, email: string, }>(event);
+    const { tourId, email } = body;
     const database = client.db("EgyTours");
     const userData = database.collection("Users");
 
     const data = await userData.findOne({
-        email: currentUser.email,
+        email: email,
     })
+    let obj = data!.bookmarks.find((o: string) => o === tourId)
 
-    if(!data.bookmark.tourId) {
+    if(!obj)
+    {
         try {
-            const options = { upsert: true }
 
-            const userDocument = {
-                $set: {
-                    bookmarks: tourId,
-                }
-            }
-            await userData.updateOne(userDocument, options);
+            userData.findOneAndUpdate(
+                {
+                    'email': email,
+                },
+                {
+                    $push: {
+                    'bookmarks': tourId
+                    } as unknown as PushOperator<Document>,
+                } 
+            );
         
         } finally {
             // Close the MongoDB client connection
             await client.close();
-            return data;
+        }
+    } else{
+        try {
+
+            userData.findOneAndUpdate(
+                {
+                    'email': email,
+                },
+                {
+                    $pull: {
+                        'bookmarks': tourId
+                    } as unknown as PullOperator<Document>,
+                } 
+            );
+        
+        } finally {
+            // Close the MongoDB client connection
+            await client.close();
         }
     }
 
-    if(data.bookmark.tourId) {
-            try {
-                await userData.aggregate([ { $unset: [ `${tourId}` ] } ]);
-            
-            } finally {
-                // Close the MongoDB client connection
-                await client.close();
-                return data;
-            }
-        }
-    }
+    return;
+
 });

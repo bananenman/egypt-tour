@@ -62,6 +62,7 @@ definePageMeta({
 
 <script>
 const { postBookmark } = useBookmark();
+const authUser = useAuthUser();
 
 import L from 'leaflet';
 const body = document.body;
@@ -207,9 +208,14 @@ async function onBookmarkClick() {
   try {
     form.error = "";
     form.pending = true;
-
-    await postBookmark(form.data.tourId );
-  } catch (error) {
+      
+      if (authUser.value) {
+        await postBookmark(form.data.tourId, authUser.value.email);
+        return;
+      } 
+      await location.reload()
+      await location.replace('/users/login')
+    } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {
       throw error;

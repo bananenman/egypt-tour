@@ -1,3 +1,10 @@
+export interface User {
+  id: string;
+  email: string;
+  password: string;
+  roles: string[];
+}
+
 import { MongoClient } from "mongodb";
 
 // * Create a new client and connect to MongoDB

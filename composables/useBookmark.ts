@@ -1,28 +1,31 @@
-export const useAuth = () => {
+export const useBookmark = () => {
 
-  const getBookmark = async (tourId: string) => {;
+  const getBookmark = async (tourId: string, email: string) => {
+    await $fetch("/bookmark/bookmark", {
+        method: "GET",
+        body: {
+          tourId,
+          email,
+        },
+    });
+  };
+
+  const postBookmark = async (tourId: string, email: string) => {
     await $fetch("/bookmark/bookmark", {
         method: "POST",
         body: {
           tourId,
+          email,
         },
     });
   };
 
-  const postBookmark = async (tourId: string) => {;
-    await $fetch("/bookmark/bookmark", {
-        method: "POST",
-        body: {
-            tourId,
-        },
-    });
-  };
-
-  const deleteBookmark = async (tourId: string) => {;
+  const deleteBookmark = async (tourId: string, email: string) => {
     await $fetch("/bookmark/bookmark", {
         method: "delete",
         body: {
-        tourId,
+          tourId,
+          email,
         },
     });
    

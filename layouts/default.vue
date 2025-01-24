@@ -75,16 +75,9 @@
 </style>
 
 <script setup>
-const user = useAuthUser()
-
-if(!localStorage.getItem('popState')){
+if(!localStorage.getItem('popState')) {
   document.body.className = "cookieConsent"
 }
-
-if(user.value) {
-  const text = document.getElementById("text").textContent = "Account";
-}
-
 </script>
 
 
