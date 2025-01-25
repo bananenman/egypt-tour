@@ -23,7 +23,6 @@ export default defineEventHandler(async (event) => {
   const userPass = (await hashPassword(password)).toString()
 
   if(!data) {
-    console.log("No User Found")
     try {
 
       // * Uses crypto to make unique ID
@@ -36,6 +35,7 @@ export default defineEventHandler(async (event) => {
         email: email,
         password: userPass,
         roles: 'USER',
+        bookmarks: [],
       }
 
       const result = await userData.insertOne(userDocument);

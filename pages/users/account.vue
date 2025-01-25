@@ -16,10 +16,15 @@
 
         <div class="user_pass">
           <h1>Your Password:</h1>
-          <p>{{ currentUser.email }}</p>
+          <p>{{ currentUser.password }}</p>
         </div>
 
         <button class="logout" @click="onLogoutClick" :disabled="form.pending">Logout</button>
+      </div>
+      
+      <!-- TODO -->
+      <div class="wishlist">
+        <h1>Wishlist</h1>
       </div>
     </div>
   </body>

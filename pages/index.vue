@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div class="container-anc">
+      <div class="container-anc" id="anc">
         <nuxt-img class="anc-egy" provider="cloudinary" src="/ancient-egy_xack5f.webp" alt="Pharaoh in sarcophagus"/>
         <div class="txt-anc">
           <div class="anc-content">

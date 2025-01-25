@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     }
   },
 
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/sitemap.xml", "/robots.txt"],
+    },
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -48,8 +55,8 @@ export default defineNuxtConfig({
   image: {
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/dndfdqrtr/image/upload/v1730551197',
-      cloudName: 'dndfdqrtr',
-      apiKey: '752348868543861',
+      cloudName: `${process.env.CLOUDINARY_CLOUD_NAME}`,
+      apiKey: `${process.env.CLODINARY_API_KEY}`,
     },
   },
   

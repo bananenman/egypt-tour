@@ -36,7 +36,7 @@
 
         <div class="sign_div">
           <p>Already have an Account?</p>
-          <a class="link" href="/log-in">LOGIN</a>
+          <a class="link" href="/users/login">LOGIN</a>
         </div>
       </div>
     </form> 
@@ -72,8 +72,9 @@ async function onRegisterClick() {
     form.pending = true;
 
     await register(form.data.email, form.data.password, form.data.rememberMe);
-
-    await navigateTo('/private');
+    
+    await location.reload();
+    await navigateTo('/users/account')
   } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {

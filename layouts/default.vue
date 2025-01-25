@@ -8,8 +8,8 @@
         <nav>
             <ul class="nav__links">
               <li class="index"><a href="/">Home</a></li>
-              <li class="about-eg"><a href="about">About</a></li>
-              <li class="route"><a href="/#pop_egy">Routes</a></li>
+              <li class="about-eg"><a href="https://egypt-tour.vercel.app/#anc">About</a></li>
+              <li class="route"><a href="/">Routes</a></li>
 
               <li class="dropdown">
                 <a class="dropbtn" @click="Dropdown()"><img src="/MenuPng.webp" alt="Dropdown Button" class="drop__button"></a>
@@ -19,7 +19,7 @@
                   <a href="/">About</a>
                   <a href="/">Routes</a>
                   <a href="mailto:bananenmaninquiries@gmail.com" aria-label="Contact us via Mail" class="cta-drop-down">Contact Us</a>
-                  <a href="/users/login" aria-label="Log in to EgyTour" class="log-drop-down">Log In / Sign Up</a>
+                  <a href="/users/login" id="login_text" aria-label="Log in to EgyTour" class="log-drop-down">Log In / Sign Up</a>
                   <div class="drop_socialIcons">
                     <a href="/facebook" aria-label="Visit my Github Profile" ><i class="bx bxl-facebook"></i></a>
                     <a href="/twitter" aria-label="Visit my Github Profile"><i class="bx bxl-twitter"></i></a>
@@ -32,7 +32,7 @@
             </ul>
         </nav>
         <a href="mailto:bananenmaninquiries@gmail.com" id="cta-button" aria-label="Contact us via Mail"><button class="cta">Contact Us</button></a>
-        <a href="/users/login" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
+        <a href="/users/login" id="login_text" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
     </header>
     <slot />
 
@@ -75,7 +75,7 @@
 </style>
 
 <script setup>
-if(!localStorage.getItem('popState')){
+if(!localStorage.getItem('popState')) {
   document.body.className = "cookieConsent"
 }
 </script>

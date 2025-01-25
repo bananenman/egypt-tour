@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const PriceSchema = new Schema({
+    name: String,
     pastPrice: String,
     price: String,
     timeStamp: String,

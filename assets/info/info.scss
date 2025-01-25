@@ -1,4 +1,4 @@
-@font-face { font-family: Playfair; src: url('../font/PlayfairDisplay.ttf'); font-display: swap; } 
+@font-face { font-family: Playfair; src: url('/font/PlayfairDisplay.ttf'); font-display: swap; } 
 /*
 --------------------------------------------------------------
 # General
@@ -25,7 +25,6 @@ li, a, button {
 
 .info-container{
     position: relative;
-    width: auto;
     height: 55em;
     left: 0em;
     top: 7em;
@@ -38,14 +37,14 @@ li, a, button {
         left: 4em;
     }
 
-    .info-text{
+    .info-text {
         position: relative;
-        left: 65em;
+        left: 55%;
         bottom: 36em;
         width: 50em;
         height: 38em;
 
-        h1{
+        h1 {
             position: relative;
             font-size: 80px;
             max-width: 40%;
@@ -53,9 +52,8 @@ li, a, button {
             top: 0.6em;
         }
 
-        p{
+        p {
             position: relative;
-            font-family: Playfair;
             font-weight: 600;
             font-size: 20px;
             width: 70%;
@@ -63,35 +61,34 @@ li, a, button {
             top: 3em;
         }
 
-        .route_btn{
-        position: relative;
-        left: 1em;
-        top: 3em;
-    
-        color: white;
-        background-color: black;
-        cursor: pointer;
-    
-        font-size: 30px;
-        padding: 10px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
+        .route_btn {
+            position: relative;
+            left: 1em;
+            top: 3em;
+        
+            color: white;
+            background-color: black;
+            cursor: pointer;
+        
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+            width: 200px;
         }
-        .book_btn{
-        position: relative;
-        left: 2em;
-        top: 3em;
 
-        color: white;
-        background-color: black;
-        cursor: pointer;
+        .bookmark_btn {
+            position: relative;
+            left: 6%;
+            top: 16.5%;
+            background-color: transparent;
+            border: 0;
+        }
 
-        font-size: 30px;
-        padding: 10.5px;
-        border-radius: 20px;
-        text-align: center;
-        width: 200px;
+        i{
+            font-size: 52px;
+
+            color: black;
         }
     }
 }
