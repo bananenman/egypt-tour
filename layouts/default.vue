@@ -8,8 +8,8 @@
         <nav>
             <ul class="nav__links">
               <li class="index"><a href="/">Home</a></li>
-              <li class="about-eg"><a href="about">About</a></li>
-              <li class="route"><a href="https://egypt-tour.vercel.app/#pop_egy">Routes</a></li>
+              <li class="about-eg"><a href="https://egypt-tour.vercel.app/#anc">About</a></li>
+              <li class="route"><a href="/">Routes</a></li>
 
               <li class="dropdown">
                 <a class="dropbtn" @click="Dropdown()"><img src="/MenuPng.webp" alt="Dropdown Button" class="drop__button"></a>
