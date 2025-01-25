@@ -8,11 +8,12 @@ export default defineEventHandler(async (event) => {
     const { tourId, email } = body;
     const database = client.db("EgyTours");
     const userData = database.collection("Users");
+    const head = getHeaders(event).referer.split('/')
 
     const data = await userData.findOne({
         email: email,
     })
-    let obj = data!.bookmarks.find((o: string) => o === tourId)
+    let obj = data!.bookmarks.find((o: string) => o === head[4])
 
     if(!obj)
     {
@@ -22,10 +23,12 @@ export default defineEventHandler(async (event) => {
             },
             {
                 $push: {
-                'bookmarks': tourId
+                'bookmarks': head[4]
                 } as unknown as PushOperator<Document>,
             } 
         );
+        return 'Added'
+
     } else{
         userData.findOneAndUpdate(
             {
@@ -33,12 +36,10 @@ export default defineEventHandler(async (event) => {
             },
             {
                 $pull: {
-                    'bookmarks': tourId
+                    'bookmarks': head[4]
                 } as unknown as PullOperator<Document>,
             } 
         );
+        return 'Removed'
     }
-
-    return;
-
 });

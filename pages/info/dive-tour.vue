@@ -6,6 +6,10 @@
     <meta name="description" content="Tour in the Red Sea">
 
     <body>
+      <div class="loader_effect" id="loader_effect">
+        <div class="loader" id="loader"></div>
+      </div> 
+      
       <div class="info-container">
         <picture>
           <source media="(max-width: 600px)" srcset="https://res.cloudinary.com/dndfdqrtr/image/upload/v1734190696/dive_info_small_u8ndou.webp">
@@ -17,7 +21,7 @@
               <h1>Diving in the Red Sea</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="getLocation()">Route</button>
-              <button class="book_btn">Book a Tour</button>
+              <button class="bookmark_btn" @click="onBookmarkClick()"><i id="book_img" class='bx bx-bookmark-alt-plus'></i></button>
             </div>
           </div>
       </div>
@@ -51,10 +55,16 @@ definePageMeta({
   layout: 'default'
 })
 
+BookmarkGet()
+
 </script>
 
 
 <script>
+const { postBookmark } = useBookmark();
+const { getBookmark } = useBookmark();
+const authUser = useAuthUser();
+
 import L from 'leaflet';
 const body = document.body;
 
@@ -186,4 +196,42 @@ async function ShowMap() {
   }, error => console.log(err));
   await setTimeout(scrollMap, 1000)
 }  
+
+const form = reactive({
+  data: {
+    tourId: 1,
+  },
+  error: "",
+  pending: false,
+});
+
+async function onBookmarkClick() {
+  try {
+    form.error = "";
+    form.pending = true;
+      
+    if (authUser.value) {
+      await postBookmark(form.data.tourId, authUser.value.email);
+      return;
+    } 
+    await location.reload()
+    await location.replace('/users/login')
+    } catch (error) {
+    console.error(error);
+    if (!(error instanceof FetchError)) {
+      throw error;
+    }
+
+    form.error = error.data.message;
+  } finally {
+    form.pending = false;
+  }
+}
+
+async function BookmarkGet() {
+
+  if (authUser.value) {
+    await getBookmark();
+  } 
+}
 </script>

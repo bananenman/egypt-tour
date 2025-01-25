@@ -1,12 +1,15 @@
 export const useBookmark = () => {
 
-  const getBookmark = async (tourId: string, email: string) => {
+  const getBookmark = async () => {
     await $fetch("/bookmark/bookmark", {
         method: "GET",
-        body: {
-          tourId,
-          email,
-        },
+        onResponse({ response }) {
+          if(response._data === 'Not Bookmarked') {
+            document.getElementById('book_img').className = 'bx bx-bookmark-alt-plus'
+          } else {
+            document.getElementById('book_img').className = 'bx bx-bookmark-alt-minus'
+          }
+        }
     });
   };
 
@@ -17,23 +20,18 @@ export const useBookmark = () => {
           tourId,
           email,
         },
+        onResponse({ response }) {
+          if(response._data === 'Removed') {
+            document.getElementById('book_img').className = 'bx bx-bookmark-alt-plus'
+          } else {
+            document.getElementById('book_img').className = 'bx bx-bookmark-alt-minus'
+          }
+        }
     });
-  };
-
-  const deleteBookmark = async (tourId: string, email: string) => {
-    await $fetch("/bookmark/bookmark", {
-        method: "delete",
-        body: {
-          tourId,
-          email,
-        },
-    });
-   
   };
 
   return {
     getBookmark,
     postBookmark,
-    deleteBookmark,
   };
 };

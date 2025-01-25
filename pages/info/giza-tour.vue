@@ -53,13 +53,15 @@ definePageMeta({
   layout: 'default'
 })
 
+BookmarkGet()
+
 </script>
 
 
 <script>
 const { postBookmark } = useBookmark();
+const { getBookmark } = useBookmark();
 const authUser = useAuthUser();
-let bool = 0;
 
 import L from 'leaflet';
 const body = document.body;
@@ -205,14 +207,6 @@ async function onBookmarkClick() {
   try {
     form.error = "";
     form.pending = true;
-
-    if(!bool) {
-      document.getElementById('book_img').className = 'bx bx-bookmark-alt-minus';
-      bool = 1;
-    } else{
-      document.getElementById('book_img').className = 'bx bxs-bookmark-alt-plus';
-      bool = 0;
-    }
       
     if (authUser.value) {
       await postBookmark(form.data.tourId, authUser.value.email);
@@ -231,4 +225,12 @@ async function onBookmarkClick() {
     form.pending = false;
   }
 }
+
+async function BookmarkGet() {
+
+  if (authUser.value) {
+    await getBookmark();
+  } 
+}
+
 </script>
