@@ -6,13 +6,11 @@
 
 ![Vercel](https://vercelbadge.vercel.app/api/bananenman/egypt-tour?style=for-the-badge)
 <br>
-<center>
     <img src="https://img.shields.io/badge/Author-BananenMan-magenta?style=flat-square">
     <img src="https://img.shields.io/badge/Open%20Source-Yes-orange?style=flat-square">
     <img src="https://img.shields.io/badge/Maintained-No-cyan?style=flat-square">
     <img src="https://img.shields.io/badge/Made%20In-Germany-green?style=flat-square">
     <img src="https://img.shields.io/badge/Written%20In-CSS (SCSS), JS, TS, HTML-blue?style=flat-square">
-</center>
 <br>
 </p>
 
