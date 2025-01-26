@@ -15,12 +15,17 @@ export const useAuth = () => {
         email,
         password,
         rememberMe,
-      },
+      },  
+      onResponse({ response }) {
+        if(response._data === undefined) {
+          return;
+        }
+      }
     });
-
     setUser(data.user);
 
     return authUser;
+    
   };
 
   const login = async (email: string, password: string, rememberMe: boolean) => {

@@ -2,13 +2,14 @@ import { MongoClient } from "mongodb";
 import { serialize, sign } from "../../lib/cookie";
 import { hashPassword } from '~/server/lib/password'
 import { User } from '~/server/models/user.model'
+import { navigateTo } from "nuxt/app";
 
 const uri = process.env.MONGODB_URI || "";
 const client = new MongoClient(uri);
 
 
 export default defineEventHandler(async (event) => {
-  
+
   // ! IMPORTANT: Gets the formData posted by useAuth
   const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
   const { email, password, rememberMe } = body;

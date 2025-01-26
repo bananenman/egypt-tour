@@ -24,8 +24,7 @@ const client = new MongoClient(uri);
     const data = await userData.findOne({
       email: email,
     })
-
-    return data;
+    return data
   }
   
   export async function findUserById(id: string) {

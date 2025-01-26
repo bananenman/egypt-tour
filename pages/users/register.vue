@@ -73,8 +73,8 @@ async function onRegisterClick() {
 
     await register(form.data.email, form.data.password, form.data.rememberMe);
     
-    await location.reload();
-    await navigateTo('/users/account')
+/*     await location.reload();
+    await navigateTo('/users/account') */
   } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {
