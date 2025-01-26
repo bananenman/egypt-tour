@@ -25,4 +25,7 @@ EgyTour is a Website that represents a mockup for booking tours in Egypt.
 ### [📋] Features
  - Geolocation via geoapify
  - Daily changing prices
+ - Bookmark feature
+ - Account creation / log in
+ - Fully responsive to device widths (RWD)
 
