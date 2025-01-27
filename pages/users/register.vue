@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 useSeoMeta({
   title: 'Sign Up',
 })
@@ -53,8 +53,28 @@ definePageMeta({
   layout: 'default',
 })
 
+</script>
+
+<script>
 import { FetchError } from 'ofetch'
 const { register } = useAuth();
+
+const mailArray = [
+  'gmail.com', 
+  'yahoo.com',
+  'hotmail.com',
+  'aol.com',
+  'hotmail.co.uk',
+  'hotmail.fr',
+  'msn.com',
+  'yahoo.fr',
+  'live.com',
+  'gmx.de',
+  'web.de',
+  'outlook.com',
+  'yandex.ru',
+  'mail.ru'
+]
 
 const form = reactive({
   data: {
@@ -71,10 +91,13 @@ async function onRegisterClick() {
     form.error = "";
     form.pending = true;
 
-    await register(form.data.email, form.data.password, form.data.rememberMe);
-    
-/*     await location.reload();
-    await navigateTo('/users/account') */
+    if(mailArray.includes(form.data.email.split('@')[1])) {
+      await register(form.data.email, form.data.password, form.data.rememberMe);
+      await location.reload();
+      await navigateTo('/users/account')
+    } else{
+      console.log('no')
+    }
   } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {
@@ -86,6 +109,7 @@ async function onRegisterClick() {
     form.pending = false;
   }
 }
+
 </script>
 
 <style lang="scss">

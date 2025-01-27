@@ -18,15 +18,19 @@ function scrollMap() {
 
 function getLocation(lat, long) {
   if (navigator.geolocation) {
-    if(document.getElementById("map").style.display !== 'none') {
-      return;
-    } else {
-      navigator.geolocation.getCurrentPosition(ShowMap(lat, long), showError)
-      document.getElementById("loader").style.display = "block";
-      document.getElementById("loader_effect").style.display = "block";
-      body.style.height = "100%";
-      body.style.overflowY = "hidden";
-    }
+      if(document.getElementById('map').className !== 'map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom' )
+      {
+        console.log("map not inioted")
+        navigator.geolocation.getCurrentPosition(showError, ShowMap)
+        document.getElementById("loader").style.display = "block";
+        document.getElementById("loader_effect").style.display = "block";
+        body.style.height = "100%";
+        body.style.overflowY = "hidden";
+      } else{
+        scrollMap()
+        return;
+      }
+    
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }

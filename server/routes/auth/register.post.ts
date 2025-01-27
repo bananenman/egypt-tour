@@ -1,8 +1,6 @@
 import { MongoClient } from "mongodb";
 import { serialize, sign } from "../../lib/cookie";
 import { hashPassword } from '~/server/lib/password'
-import { User } from '~/server/models/user.model'
-import { navigateTo } from "nuxt/app";
 
 const uri = process.env.MONGODB_URI || "";
 const client = new MongoClient(uri);
@@ -21,6 +19,7 @@ export default defineEventHandler(async (event) => {
   const data = await userData.findOne({
     email: email,
   })
+
   const userPass = (await hashPassword(password)).toString()
 
   if(!data) {

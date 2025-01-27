@@ -91,7 +91,7 @@ li, a, button {
   .txt-anc {
     position: relative;
     top: 6em;
-    max-width: 50%;
+    width: 50%;
   }
 
   .anc-content{
@@ -114,7 +114,6 @@ li, a, button {
   position: relative;
   width: 100%;
   height: 75em;
-  margin: 0 auto;
   background-color: #f4f1ee;
 
   .pop_egy{
@@ -129,14 +128,14 @@ li, a, button {
   .container-items {
     display: grid;
     position: relative;
-    width: 80%;
+    width: 100%;
     /* * REMEMBER: MARGIN IS FOR HORIZONTAL! */
     margin: 0 auto;
     top: 8em;
   
     grid-gap: 1em 1em;
     grid-template-rows: repeat(1, auto);
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     /* ! Justify-items is for rows and align-items is for columns! */
     justify-items: center;
     align-items: center;
@@ -144,11 +143,12 @@ li, a, button {
     /* ! justify-self is for configuring singular items! */
     .item {
       background-color: #f0f0f0;
-      width: 20em;
+      width: 18em;
       border-radius: 8px;
       box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   
       img {
+        width: 100%;
         border-radius: 8px;
         transition: 0.35s;
       }
@@ -199,9 +199,10 @@ li, a, button {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 995px) {
   .background {
     height: 25em;
+    width: 100svw;
   }
   
   .container{
@@ -259,7 +260,7 @@ li, a, button {
 
   .index_tour_container{
     position: relative;
-    height: 165em;
+    height: 85em;
     top: 0em;
 
     .pop_egy{
@@ -270,16 +271,11 @@ li, a, button {
     }
     .container-items{
       top: 5em;
-      right: 2em;
+      left: 0.5em;
+      grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
 
       .item {
         width: 14em;
-
-        img {
-          width: 100%;
-          border-radius: 8px;
-          transition: 0.35s;
-        }
       }
 
       .grid-content {
@@ -302,30 +298,6 @@ li, a, button {
 }
 
 @media only screen and (max-width: 400px) {
-
-  .container-anc{
-    height: 75em;
-    
-    .txt-anc {
-      top: 3em;
-      left: 2em;
-      width: 80%;
-    }
-    .anc-content{
-      width: 100%;
-  
-      h1{
-        left: 0em;
-        position: relative;
-      }
-  
-      p{
-        position: relative;
-        left: 0;
-        max-width: 100%;
-      }
-    }
-  }
 
   .background {
     min-height: 25em;
@@ -365,7 +337,7 @@ li, a, button {
 
     img{
       position: relative;
-      left: 8em;
+      left: 7em;
       top: 2em;
       height: 13em;
       width: 10em;
@@ -380,8 +352,17 @@ li, a, button {
 
     .txt-anc {
       top: 5em;
-      left: 1em;
-      width: 80%;
+      left: 10%;
+      width: 85%;
+
+      .anc-content{
+        font-size: 20px;  
+    
+        h1{
+          position: relative;
+          left: 10%;
+        }
+      }
     }
   }
 
@@ -401,12 +382,6 @@ li, a, button {
 
       .item {
         width: 14em;
-
-        img {
-          width: 100%;
-          border-radius: 8px;
-          transition: 0.35s;
-        }
       }
 
       .grid-content {

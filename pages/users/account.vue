@@ -11,12 +11,12 @@
 
         <div class="user_mail">
           <h1>Your Email:</h1>
-          <p>{{ currentUser.email }}</p>
+          <p>{{ currentUser?.email }}</p>
         </div>
 
         <div class="user_pass">
-          <h1>Your Password:</h1>
-          <p>{{ currentUser.password }}</p>
+          <h1>Your Roles:</h1>
+          <p>{{ currentUser?.roles }}</p>
         </div>
 
         <button class="logout" @click="onLogoutClick" :disabled="form.pending">Logout</button>
