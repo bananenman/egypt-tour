@@ -35,7 +35,7 @@
         </div>
 
         <div class="sign_div">
-          <p>No Account yet?</p>
+          <p class="no_acc">No Account yet?</p>
           <a class="link" href="/users/register">SIGN UP</a>
         </div>
       </div>

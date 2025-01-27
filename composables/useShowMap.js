@@ -18,11 +18,15 @@ function scrollMap() {
 
 function getLocation(lat, long) {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(ShowMap(lat, long), showError)
-    document.getElementById("loader").style.display = "block";
-    document.getElementById("loader_effect").style.display = "block";
-    body.style.height = "100%";
-    body.style.overflowY = "hidden";
+    if(document.getElementById("map").style.display !== 'none') {
+      return;
+    } else {
+      navigator.geolocation.getCurrentPosition(ShowMap(lat, long), showError)
+      document.getElementById("loader").style.display = "block";
+      document.getElementById("loader_effect").style.display = "block";
+      body.style.height = "100%";
+      body.style.overflowY = "hidden";
+    }
   } else { 
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
