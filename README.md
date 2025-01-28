@@ -11,7 +11,6 @@
     <img src="https://img.shields.io/badge/Made%20In-Germany-red?style=flat-square">
     <img src="https://img.shields.io/badge/Written%20In-CSS, JS, TS, HTML-blue?style=flat-square">
 <br>
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bananenman&repo=egypt-tour&theme=synthwave">
 </p>
 
 ### [📃] Description
