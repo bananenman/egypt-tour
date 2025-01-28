@@ -61,4 +61,18 @@ async function onLogoutClick() {
   }
 }
 
+BookmarkGet()
+
+</script>
+
+<script lang="ts">
+const authUser = useAuthUser();
+const { getAllBookmarks } = useBookmark();
+
+async function BookmarkGet() {
+  if (authUser.value) {
+    await getAllBookmarks();
+  } 
+}
+
 </script>

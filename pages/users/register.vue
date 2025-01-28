@@ -92,11 +92,16 @@ async function onRegisterClick() {
     form.pending = true;
 
     if(mailArray.includes(form.data.email.split('@')[1])) {
-      await register(form.data.email, form.data.password, form.data.rememberMe);
-      await location.reload();
-      await navigateTo('/users/account')
+      if(form.data.password.length > 8) {
+
+        await register(form.data.email, form.data.password, form.data.rememberMe);
+        await location.reload();
+        await navigateTo('/users/account')
+      } else{
+        window.alert('Your password must be atleast 8 charachters long.')
+      }
     } else{
-      console.log('no')
+      window.alert('Sorry, this email domain is not whitelisted.')
     }
   } catch (error) {
     console.error(error);
