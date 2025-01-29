@@ -40,7 +40,7 @@
       <div class="cookieText">
         <h1>Cookie Notice</h1>
         <p>We use cookies, to ensure you get the best experience on our website.</p>
-        <p><a href="/policies/cookie-policy" aria-label="Look at our Cookie Policy">Read More</a></p>
+        <p><a href="/policies/cookie-policy" aria-label="Look at our Cookie Policy">Cookie Policy</a></p>
         <button id="ck_close" @click="Notice()">Only Essential Cookies.</button>
         <button id="ck_close" @click="Notice()">Accept all Cookies</button>
       </div>
