@@ -13,15 +13,6 @@ export const useBookmark = () => {
     });
   };
 
-  const getAllBookmarks = async () => {
-    await $fetch("/bookmark/allBookmarks", {
-        method: "GET",
-        onResponse({ response }) {
-          console.log(response._data)
-        }
-    });
-  };
-
   const postBookmark = async (tourId: string, email: string) => {
     await $fetch("/bookmark/bookmark", {
         method: "POST",
@@ -41,7 +32,6 @@ export const useBookmark = () => {
 
   return {
     getBookmark,
-    getAllBookmarks,
     postBookmark,
   };
 };

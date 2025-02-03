@@ -7,7 +7,6 @@ const client = new MongoClient(uri);
 
 
 export default defineEventHandler(async (event) => {
-  console.log('wr')
   // ! IMPORTANT: Gets the formData posted by useAuth
   const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
   const { email, password, rememberMe } = body;

@@ -25,6 +25,7 @@
       <!-- TODO -->
       <div class="wishlist">
         <h1>Wishlist</h1>
+        <Bookmark :user="userVar" />
       </div>
     </div>
   </body>
@@ -67,12 +68,20 @@ BookmarkGet()
 
 <script lang="ts">
 const authUser = useAuthUser();
-const { getAllBookmarks } = useBookmark();
 
 async function BookmarkGet() {
   if (authUser.value) {
-    await getAllBookmarks();
+    await $fetch("/bookmark/allBookmarks", {
+        method: "GET",
+        onResponse({ response }) {
+          console.log(response._data)
+          userVar = JSON.stringify(response._data)
+          console.log(userVar)
+        }
+    });
   } 
 }
+
+let userVar = ''
 
 </script>
