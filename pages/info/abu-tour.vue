@@ -56,6 +56,7 @@ definePageMeta({
 })
 
 BookmarkGet()
+getPrices()
 
 </script>
 
@@ -99,9 +100,17 @@ async function onBookmarkClick() {
 }
 
 async function BookmarkGet() {
-
   if (authUser.value) {
     await getBookmark();
   } 
+}
+
+async function getPrices() {
+  await $fetch("/prices/prices", {
+      method: "GET",
+      onResponse({ response }) {
+        console.log(response.data)
+      }
+  });
 }
 </script>
