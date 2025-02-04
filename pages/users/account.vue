@@ -69,19 +69,18 @@ BookmarkGet()
 <script lang="ts">
 const authUser = useAuthUser();
 
+let userVar: string  
+
 async function BookmarkGet() {
   if (authUser.value) {
     await $fetch("/bookmark/allBookmarks", {
         method: "GET",
         onResponse({ response }) {
-          console.log(response._data)
-          userVar = JSON.stringify(response._data)
+          userVar = response._data.split(`"`)
           console.log(userVar)
         }
     });
   } 
 }
-
-let userVar = ''
 
 </script>

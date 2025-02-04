@@ -1,5 +1,5 @@
 const ONE_DAY = 60 * 60 * 24 * 1000;
-const ONE_WEEK = ONE_DAY * 7;
+const ONE_MONTH = ONE_DAY * 7 * 30;
 
 export default defineNuxtConfig({
   app: {
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     cookieName: "__session",
     cookieSecret: "secret",
     cookieExpires: ONE_DAY.toString(),
-    cookieRememberMeExpires: ONE_WEEK.toString(),
+    cookieRememberMeExpires: ONE_MONTH.toString(),
   },
 
   imports: {
