@@ -32,7 +32,7 @@
             </ul>
         </nav>
         <a href="mailto:bananenmaninquiries@gmail.com" id="cta-button" aria-label="Contact us via Mail"><button class="cta">Contact Us</button></a>
-        <a href="/users/login" id="login_text" aria-label="Log in to EgyTour"><button class="log">Log in / Sign Up</button></a>
+        <a href="/users/login" id="login_text" aria-label="Log in to EgyTour"><button class="log" id="log">Log in / Sign Up</button></a>
     </header>
     <slot />
 
@@ -76,13 +76,27 @@
 </style>
 
 <script setup>
+
+const user = useAuthUser()
+
+if(!user.value) {
+    return;
+  } else {
+    HeaderText()
+  }
+
 if(!localStorage.getItem('popState')) {
   document.body.className = "cookieConsent"
 }
+
 </script>
 
 
 <script>
+
+function HeaderText() {
+  document.getElementById('log').textContent = 'Account'
+}
 
 function Notice() {
   localStorage.setItem('popState','shown')
