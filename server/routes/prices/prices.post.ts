@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, PushOperator } from "mongodb";
 
 const uri = process.env.MONGODB_URI || "";
 const client = new MongoClient(uri);
@@ -8,9 +8,9 @@ export default defineEventHandler(async (event) => {
 
     const user = await getUserFromSession(event);
     const database = client.db("EgyTours");
-    const userData = database.collection("Users");
+    const priceData = database.collection("Prices");
 
-    const data = await userData.findOne({
+    const data = await priceData.findOne({
         email: user!.email,
     })
 
@@ -22,18 +22,26 @@ export default defineEventHandler(async (event) => {
             prices: [],
         }
 
-        await userData.insertOne(userDocument);
+        await priceData.insertOne(userDocument);
 
 
         } finally {
         // Close the MongoDB client connection
         await client.close();
-    }
-
+        }
     }
 
     if(data) {
-        return;
+        priceData.findOneAndUpdate(
+            {
+                'email': email,
+            },
+            {
+                $push: {
+                    'prices':
+                } as unknown as PushOperator<Document>,
+            } 
+        );
     }
 
 });
