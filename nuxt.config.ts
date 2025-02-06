@@ -59,9 +59,17 @@ export default defineNuxtConfig({
       apiKey: `${process.env.CLODINARY_API_KEY}`,
     },
   },
+
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        'img-src': ["'self'", 'data:', 'https://egypt-tour.vercel.app/'],
+      },
+    },
+  },
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge'],
+  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge', 'nuxt-security'],
   compatibilityDate: '2024-08-29',
 })

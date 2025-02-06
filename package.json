@@ -24,6 +24,7 @@
     "mongoose": "^8.9.5",
     "next-auth": "~4.24.11",
     "nuxt": "^3.13.0",
+    "nuxt-security": "^2.1.5",
     "sass": "^1.82.0",
     "sass-embedded": "^1.82.0",
     "util": "^0.12.5",
