@@ -92,6 +92,8 @@ async function onBookmarkClick() {
     if (authUser.value) {
       await postBookmark(form.data.tourId, authUser.value.email);
       return;
+    } else {
+      window.alert('You have to be logged in to Bookmark a Tour.')
     }
     } catch (error) {
     console.error(error);
