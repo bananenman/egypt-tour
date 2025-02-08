@@ -59,24 +59,9 @@ export default defineNuxtConfig({
       apiKey: `${process.env.CLODINARY_API_KEY}`,
     },
   },
-
-  security: {
-    headers: {
-      contentSecurityPolicy: {
-        'img-src': [
-          "'self'",
-          "https://res.cloudinary.com",
-        ],
-        'script-src': [
-          "https://egypt-tour.vercel.app",
-          "https://vercel.live"
-        ]
-      },
-    },
-  },
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge', 'nuxt-security'],
+  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge'],
   compatibilityDate: '2024-08-29',
 })
