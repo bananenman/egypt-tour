@@ -5,14 +5,13 @@ const client = new MongoClient(uri);
 
 export default defineEventHandler(async (event) => {
 
-    const body = await readBody<{ name: string }>(event);
-    const { name } = body;
+    const name = getHeaders(event).referer!.split('/')
 
     const database = client.db("EgyTours")
     const prices = database.collection("Prices")
 
     const data = await prices.findOne({
-        name: name,
+        name: name[4],
     })
 
    return data;

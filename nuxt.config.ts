@@ -1,5 +1,5 @@
 const ONE_DAY = 60 * 60 * 24 * 1000;
-const ONE_WEEK = ONE_DAY * 7;
+const ONE_MONTH = ONE_DAY * 7 * 30;
 
 export default defineNuxtConfig({
   app: {
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     cookieName: "__session",
     cookieSecret: "secret",
     cookieExpires: ONE_DAY.toString(),
-    cookieRememberMeExpires: ONE_WEEK.toString(),
+    cookieRememberMeExpires: ONE_MONTH.toString(),
   },
 
   imports: {
@@ -59,9 +59,17 @@ export default defineNuxtConfig({
       apiKey: `${process.env.CLODINARY_API_KEY}`,
     },
   },
+
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        'img-src': ["'self'", 'data:', 'https://egypt-tour.vercel.app/'],
+      },
+    },
+  },
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge'],
+  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge', 'nuxt-security'],
   compatibilityDate: '2024-08-29',
 })

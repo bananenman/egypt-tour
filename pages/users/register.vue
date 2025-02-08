@@ -14,13 +14,13 @@
     <form @submit.prevent="onRegisterClick" class="form">
       <div class="form_container">
         <h1>Sign Up</h1>
-        <div class="email_div">
+        <div class="uname_div">
           <label for="email"><b>E-Mail</b></label>
           <input type="email" id="email_input" placeholder="Enter your E-Mail" name="email" v-model="form.data.email" required>
         </div>
 
 
-        <div class="password_div">
+        <div class="upass_div">
           <label for="password"><b>Password</b></label>
           <input type="password" id="pass_input" placeholder="Enter your Password" name="password" v-model="form.data.password" required>
         </div>
@@ -31,11 +31,11 @@
             <label class="remember_label" for="remember">Remember me?</label>
             <p>By clicking Sign Up, you agree to our <a href="/policies/privacy-policy">Terms of Service</a> and <a href="/policies/privacy-policy">Privacy Policy.</a></p>
           </div>
-          <input type="submit" value="Sign Up">
+          <button class="log-in" type="submit" :disabled="form.pending">Sign Up</button>
         </div>
 
         <div class="sign_div">
-          <p>Already have an Account?</p>
+          <p class="alr_acc">Already have an Account?</p>
           <a class="link" href="/users/login">LOGIN</a>
         </div>
       </div>
@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 useSeoMeta({
   title: 'Sign Up',
 })
@@ -53,8 +53,28 @@ definePageMeta({
   layout: 'default',
 })
 
+</script>
+
+<script>
 import { FetchError } from 'ofetch'
 const { register } = useAuth();
+
+const mailArray = [
+  'gmail.com', 
+  'yahoo.com',
+  'hotmail.com',
+  'aol.com',
+  'hotmail.co.uk',
+  'hotmail.fr',
+  'msn.com',
+  'yahoo.fr',
+  'live.com',
+  'gmx.de',
+  'web.de',
+  'outlook.com',
+  'yandex.ru',
+  'mail.ru'
+]
 
 const form = reactive({
   data: {
@@ -71,10 +91,18 @@ async function onRegisterClick() {
     form.error = "";
     form.pending = true;
 
-    await register(form.data.email, form.data.password, form.data.rememberMe);
-    
-/*     await location.reload();
-    await navigateTo('/users/account') */
+    if(mailArray.includes(form.data.email.split('@')[1])) {
+      if(form.data.password.length > 8) {
+
+        await register(form.data.email, form.data.password, form.data.rememberMe);
+        await location.reload();
+        await navigateTo('/users/account')
+      } else{
+        window.alert('Your password must be atleast 8 charachters long.')
+      }
+    } else{
+      window.alert('Sorry, this email domain is not whitelisted.')
+    }
   } catch (error) {
     console.error(error);
     if (!(error instanceof FetchError)) {
@@ -86,8 +114,9 @@ async function onRegisterClick() {
     form.pending = false;
   }
 }
+
 </script>
 
 <style lang="scss">
-  @use "~/assets/users/register.scss";
+  @use "~/assets/users/login.scss";
 </style>

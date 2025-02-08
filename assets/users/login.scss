@@ -1,4 +1,4 @@
-@font-face { font-family: Playfair; src: url('../font/PlayfairDisplay.ttf'); font-display: swap; } 
+@font-face { font-family: Playfair; src: url('../font/Playfair.ttf'); font-display: swap; } 
 
 /*#region Body*/
 
@@ -211,6 +211,7 @@ li, a, button {
   .container{
 
     .form{
+      bottom: 52em;
       left: -0em;
 
       .form_container{
@@ -240,7 +241,11 @@ li, a, button {
         }
 
         .sign_div{
-          p{
+          .alr_acc{
+            left: 30%;
+            width: 52%;
+          }
+          .no_acc{
             left: 36%;
             width: 52%;
           }

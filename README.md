@@ -3,7 +3,7 @@
 ![Modern Tour Provider](public/sitepic.jpg)
 <h4 align="center"> Modern Tour Provider </h4>
 <p align="center">
-    ![Vercel](https://vercelbadge.vercel.app/api/bananenman/egypt-tour?style=for-the-badge)
+    ! [Vercel](https://vercelbadge.vercel.app/api/bananenman/egypt-tour?style=for-the-badge)
 <br>
     <img src="https://img.shields.io/badge/Author-BananenMan-magenta?style=flat-square">
     <img src="https://img.shields.io/badge/Open%20Source-Yes-orange?style=flat-square">
@@ -11,7 +11,6 @@
     <img src="https://img.shields.io/badge/Made%20In-Germany-red?style=flat-square">
     <img src="https://img.shields.io/badge/Written%20In-CSS, JS, TS, HTML-blue?style=flat-square">
 <br>
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=bananenman&repo=egypt-tour&theme=synthwave">
 </p>
 
 ### [📃] Description

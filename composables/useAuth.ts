@@ -18,8 +18,9 @@ export const useAuth = () => {
       },  
       onResponse({ response }) {
         if(response._data === undefined) {
+          window.alert('This email is already being used, please Login or choose a different email.')
           return;
-        }
+        } 
       }
     });
     setUser(data.user);

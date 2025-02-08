@@ -1,8 +1,8 @@
 <template>
-    <title>Your Account</title>
+    <title>Admin Panel</title>
     <html lang="en"></html>
-    <meta name="title" content="Your Account">
-    <meta name="description" content="Your EgyTour Account">
+    <meta name="title" content="Admin Panel">
+    <meta name="description" content="EgyTour Admin Panel">
 
   <body>
     <div class="user_container">
@@ -76,7 +76,7 @@ async function BookmarkGet() {
     await $fetch("/bookmark/allBookmarks", {
         method: "GET",
         onResponse({ response }) {
-          /* userVar = response._data.split(`"`) */
+          userVar = response._data.split(`"`)
           console.log(userVar)
         }
     });

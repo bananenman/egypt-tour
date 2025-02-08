@@ -1,15 +1,12 @@
 import { MongoClient } from "mongodb";
 import { serialize, sign } from "../../lib/cookie";
 import { hashPassword } from '~/server/lib/password'
-import { User } from '~/server/models/user.model'
-import { navigateTo } from "nuxt/app";
 
 const uri = process.env.MONGODB_URI || "";
 const client = new MongoClient(uri);
 
 
 export default defineEventHandler(async (event) => {
-
   // ! IMPORTANT: Gets the formData posted by useAuth
   const body = await readBody<{ email: string; password: string; rememberMe: boolean }>(event);
   const { email, password, rememberMe } = body;
@@ -21,6 +18,7 @@ export default defineEventHandler(async (event) => {
   const data = await userData.findOne({
     email: email,
   })
+
   const userPass = (await hashPassword(password)).toString()
 
   if(!data) {
@@ -39,8 +37,7 @@ export default defineEventHandler(async (event) => {
         bookmarks: [],
       }
 
-      const result = await userData.insertOne(userDocument);
-      console.log(`A document was inserted with the _id: ${result.insertedId}`);
+      await userData.insertOne(userDocument);
 
       const config = useRuntimeConfig();
     

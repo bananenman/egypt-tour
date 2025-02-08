@@ -21,7 +21,11 @@
               <h1>Abu Simbel</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="locationMap()">Route</button>
-              <button class="bookmark_btn" @click="onBookmarkClick()"><i id="book_img" class='bx bx-bookmark-alt-plus'></i></button>
+                <div class="price_container">
+                  <p class="old_price"> {{ priceNumber }} </p>
+                  <p class="new_price"> {{ priceNumber }} </p>
+                </div>
+              <button class="bookmark_btn" @click="onBookmarkClick()" aria-label="Name"><i id="book_img" class='bx bx-bookmark-alt-plus'></i></button>
             </div>
           </div>
       </div>
@@ -56,6 +60,7 @@ definePageMeta({
 })
 
 BookmarkGet()
+getPrices()
 
 </script>
 
@@ -63,6 +68,8 @@ BookmarkGet()
 const { postBookmark } = useBookmark();
 const { getBookmark } = useBookmark();
 const authUser = useAuthUser();
+
+let priceNumber
 
 import { getLocation } from '~/composables/useShowMap';
 function locationMap() {
@@ -85,6 +92,8 @@ async function onBookmarkClick() {
     if (authUser.value) {
       await postBookmark(form.data.tourId, authUser.value.email);
       return;
+    } else {
+      window.alert('You have to be logged in to Bookmark a Tour.')
     }
     } catch (error) {
     console.error(error);
@@ -99,9 +108,18 @@ async function onBookmarkClick() {
 }
 
 async function BookmarkGet() {
-
   if (authUser.value) {
     await getBookmark();
   } 
+}
+
+async function getPrices() {
+  await $fetch("/prices/prices", {
+      method: "GET",
+      onResponse({ response }) {
+        console.log(response._data)
+        priceNumber = response._data
+      }
+  });
 }
 </script>
