@@ -68,6 +68,8 @@ export default defineNuxtConfig({
           "https://res.cloudinary.com",
         ],
         'script-src': [
+          "https://egypt-tour.vercel.app",
+          "https://vercel.live"
         ]
       },
     },
