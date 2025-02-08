@@ -76,7 +76,7 @@ async function BookmarkGet() {
     await $fetch("/bookmark/allBookmarks", {
         method: "GET",
         onResponse({ response }) {
-          userVar = response._data.split(`"`)
+          /* userVar = response._data.split(`"`) */
           console.log(userVar)
         }
     });

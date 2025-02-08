@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
             },
             {
                 $push: {
-                    'prices':
+                    'prices': email
                 } as unknown as PushOperator<Document>,
             } 
         );
