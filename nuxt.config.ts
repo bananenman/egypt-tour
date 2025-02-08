@@ -63,7 +63,10 @@ export default defineNuxtConfig({
   security: {
     headers: {
       contentSecurityPolicy: {
-        'img-src': ["'self'", 'data:', 'https://egypt-tour.vercel.app/'],
+        'img-src': [
+          "'self'",
+          "https://res.cloudinary.com",
+        ],
       },
     },
   },
