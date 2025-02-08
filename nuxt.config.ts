@@ -68,8 +68,6 @@ export default defineNuxtConfig({
           "https://res.cloudinary.com",
         ],
         'script-src': [
-          "'self'",
-          "https:"
         ]
       },
     },
