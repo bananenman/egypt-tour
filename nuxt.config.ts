@@ -69,6 +69,7 @@ export default defineNuxtConfig({
         ],
         'script-src': [
           "'self'",
+          "https:"
         ]
       },
     },
