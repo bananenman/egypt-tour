@@ -67,6 +67,9 @@ export default defineNuxtConfig({
           "'self'",
           "https://res.cloudinary.com",
         ],
+        'script-src': [
+          "'self'",
+        ]
       },
     },
   },
