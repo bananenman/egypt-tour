@@ -6,8 +6,8 @@ export default defineEventHandler(async (event) => {
     const user = await getUserFromSession(event);
     const database = client.db("EgyTours");
     const userData = database.collection("Users");
-    const head = getHeaders(event).referer!.split('/')
-
+    const head = getHeaders(event).referer.split('/')
+    
     // * Ignore the error
     const data = await userData.findOne({
         email: user!.email,
