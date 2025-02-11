@@ -33,7 +33,8 @@
         <div class="map" id="map">
 
           <div class="map_text" id="map_text">
-          
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce.</p>
+            <p>Contact us to book this tour.</p>
           </div>
         </div>
       </div>

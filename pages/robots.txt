@@ -1,8 +1,7 @@
 # robots.txt file for EgyTour
 
 User-Agent: *
-Disallow: /bookmark/
-Disallow: /prices/
-Disallow: /auth/
+Disallow: /bookmark/*
+Disallow: /auth/*
 
 Sitemap: https://www.egypt-tour.vercel.app/sitemap.xml
