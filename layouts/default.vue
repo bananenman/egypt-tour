@@ -11,7 +11,7 @@
               <li class="route"><a href="/">Routes</a></li>
 
               <li class="dropdown">
-                <a class="dropbtn" @click="Dropdown()"><img src="/MenuPng.webp" alt="Dropdown Button" class="drop__button"></a>
+                <button class="dropbtn" @click="Dropdown()"><img src="/MenuPng.webp" alt="Dropdown Button" class="drop__button"></button>
                 <div class="dropdown-content" id="dropdown_content">
                   <button class="exit_button" id="exit_button" @click="CloseDropdown()"><img src="/MenuClose.webp" alt="Close Dropdown" class="drop__close"></button>
                   <a href="/">Home</a>
