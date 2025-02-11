@@ -21,10 +21,6 @@
               <h1>Abu Simbel</h1>
               <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce. Platea placerat nullam augue potenti fermentum felis dictum. Suscipit sapien feugiat facilisi venenatis dolor morbi. Metus adipiscing ex integer finibus aptent dapibus aenean. Luctus dignissim luctus vestibulum cursus ligula maecenas. Mattis ante ipsum molestie vitae ultrices conubia ut penatibus. Amet sem risus vitae lacinia; erat eros elit ac?</p>
               <button class="route_btn" @click="locationMap()">Route</button>
-                <div class="price_container">
-                  <p class="old_price"> {{ priceNumber }} </p>
-                  <p class="new_price"> {{ priceNumber }} </p>
-                </div>
               <button class="bookmark_btn" @click="onBookmarkClick()" aria-label="Name"><i id="book_img" class='bx bx-bookmark-alt-plus'></i></button>
             </div>
           </div>
@@ -37,7 +33,8 @@
         <div class="map" id="map">
 
           <div class="map_text" id="map_text">
-          
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce.</p>
+            <p>Contact us to book this tour.</p>
           </div>
         </div>
       </div>

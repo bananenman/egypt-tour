@@ -15,3 +15,7 @@
 defineProps<{ user: string | null }>();
 
 </script>
+
+<style lang="scss">
+  @use "~/assets/users/bookmark.scss";
+</style>

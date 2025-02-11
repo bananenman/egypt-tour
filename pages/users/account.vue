@@ -25,7 +25,7 @@
       <!-- TODO -->
       <div class="wishlist">
         <h1>Wishlist</h1>
-        <Bookmark :user="userVar" />
+        <!-- <Bookmark :user="userVar" /> -->
       </div>
     </div>
   </body>
@@ -62,25 +62,24 @@ async function onLogoutClick() {
   }
 }
 
-BookmarkGet()
+/* BookmarkGet() */
 
 </script>
 
-<script lang="ts">
+<!-- <script lang="ts">
 const authUser = useAuthUser();
 
-let userVar: string  
+let userVar: string
 
 async function BookmarkGet() {
   if (authUser.value) {
     await $fetch("/bookmark/allBookmarks", {
         method: "GET",
         onResponse({ response }) {
-          /* userVar = response._data.split(`"`) */
-          console.log(userVar)
+          userVar = console.log(response)
         }
     });
   } 
 }
 
-</script>
+</script> -->
