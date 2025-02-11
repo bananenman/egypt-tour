@@ -62,6 +62,6 @@ export default defineNuxtConfig({
   
   devtools: {enabled: false},
   ssr: false,
-  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge'],
-  compatibilityDate: '2024-08-29',
+  modules: ["@nuxtjs/cloudinary", '@nuxt/image-edge', '@nuxtjs/robots'],
+  compatibilityDate: '2025-02-10',
 })
