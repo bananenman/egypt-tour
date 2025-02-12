@@ -23,10 +23,10 @@
       </div>
       
       <!-- TODO -->
-      <div class="wishlist">
+<!--       <div class="wishlist">
         <h1>Wishlist</h1>
-        <!-- <Bookmark :user="userVar" /> -->
-      </div>
+        <Bookmark :user="userVar" />
+      </div> -->
     </div>
   </body>
 </template>
@@ -76,7 +76,7 @@ async function BookmarkGet() {
     await $fetch("/bookmark/allBookmarks", {
         method: "GET",
         onResponse({ response }) {
-          userVar = console.log(response)
+
         }
     });
   } 

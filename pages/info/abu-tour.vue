@@ -30,12 +30,11 @@
         <div class="map_info">
           <p>*Note that this map provides a route for car travel</p>
         </div>
-        <div class="map" id="map">
-
-          <div class="map_text" id="map_text">
+<!--         <div class="map_text" id="map_text">
             <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Phasellus rhoncus blandit donec natoque quam. Adipiscing curabitur vestibulum pulvinar at morbi, nam fusce.</p>
-            <p>Contact us to book this tour.</p>
-          </div>
+            <br><p>Contact us to book this tour.</p></
+        </div> -->
+        <div class="map" id="map">
         </div>
       </div>
     </body>
@@ -65,8 +64,6 @@ getPrices()
 const { postBookmark } = useBookmark();
 const { getBookmark } = useBookmark();
 const authUser = useAuthUser();
-
-let priceNumber
 
 import { getLocation } from '~/composables/useShowMap';
 function locationMap() {
@@ -113,10 +110,6 @@ async function BookmarkGet() {
 async function getPrices() {
   await $fetch("/prices/prices", {
       method: "GET",
-      onResponse({ response }) {
-        console.log(response._data)
-        priceNumber = response._data
-      }
   });
 }
 </script>

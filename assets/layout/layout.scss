@@ -96,7 +96,7 @@ header {
     position: fixed;
     display: none;
     flex-wrap: wrap;
-    top: 75%;
+    top: 70%;
     left: 80%;
 
     width: 15%;
@@ -256,11 +256,11 @@ footer{
         padding: 25px;
     }
 
-	.dropbtn:hover{
-		background-color: inherit;
-		padding: 0;
-		border-radius: 0;
-	}
+    .dropbtn {
+        border: none;
+        background-color: transparent;
+    }    
+
     .drop__button {
         width: 40px;
     }
@@ -331,7 +331,11 @@ footer{
 }
 
 @media only screen and (max-width: 720px) {
-    
+
+    .cookieContainer{
+        top: 60%;
+    }
+
     .dropdown-content a {
      	color: black;
 		font-size: 24px;
@@ -342,6 +346,7 @@ footer{
 }
     
 @media only screen and (max-width: 600px) {
+
     .dropdown-content {
         width: 90%;
     }
@@ -362,6 +367,13 @@ footer{
 }
 
 @media only screen and (max-width: 400px) {
+
+    .cookieContainer{
+        top: 62%;
+        left: 14em;
+        width: 40%;
+    }
+
 
     footer{
         bottom: -10rem;

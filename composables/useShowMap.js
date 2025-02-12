@@ -18,14 +18,18 @@ function scrollMap() {
 
 function getLocation(lat, long) {
   if (navigator.geolocation) {
-      if(document.getElementById('map').className !== 'map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom' )
+      if(document.getElementById('map').className !== 'map leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom')
       {
-        console.log("map not inioted")
-        navigator.geolocation.getCurrentPosition(showError, ShowMap)
+        navigator.geolocation.getCurrentPosition(function() {
+          showError
+          ShowMap(lat, long)
+        })
+
         document.getElementById("loader").style.display = "block";
         document.getElementById("loader_effect").style.display = "block";
         body.style.height = "100%";
         body.style.overflowY = "hidden";
+        return 
       } else{
         scrollMap()
         return;
@@ -107,7 +111,6 @@ async function ShowMap(lat, long) {
       return `${layer.feature.properties.distance} ${layer.feature.properties.distance_units}, ${layer.feature.properties.time}`
     }).addTo(map);
 
-    // collect all transition positions
     const turnByTurns = [];
     result.features.forEach(feature => feature.properties.legs.forEach((leg, legIndex) => leg.steps.forEach(step => {
       const pointFeature = {
