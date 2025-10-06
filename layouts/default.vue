@@ -63,7 +63,7 @@
           
       </div>
       <div class="footerBottom">
-          <a href="https://bananenman.vercel.app/" target="_blank">Made by<span class="designer">David</span></a>
+          <a href="https://bananenman.vercel.app/" target="_blank">Made by<span class="designer">Banana</span></a>
       </div>
     </footer>
   </body>
